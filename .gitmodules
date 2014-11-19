@@ -1,0 +1,3 @@
+[submodule "tournabox"]
+	path = tournabox
+	url = git@github.com:laheadle/tournabox.git
