@@ -37,22 +37,35 @@ body {
 .tourney-lost { color: red }
 .tourney-won { color: green }
 .tourney-willFace { font-weight: bold }
-/* .tourney-menu { text-align: center } */
-table.tourney-outerTable { margin-top: 10px; }
-body { font-family: Arial, Sans Serif; width: 1000px; margin: 50px auto; }
-.tourney-header { font-weight: bold; font-style: italic; font-size: 1.2em }
-.tourney-FilterBox { float: right } 
-.tourney-container { float: right; display: inline-block }
+.tourney-menu {
+	overflow: auto;
+}
 
-input[type="checkbox"] {
-margin-right: 20px;
-vertical-align: middle;
+.tourney-menu >* {
+	vertical-align: center;
+}
+
+table.tourney-outerTable { margin-top: 10px; }
+.tourney-header { font-weight: bold; font-style: italic; font-size: 1.2em }
+.tourney-filterBox { float: right } 
+.tourney-container {
+	float: right;
+	display: inline-block;
+	padding: 10px;
+	height: 400px;
+	overflow: scroll;
+	width: 700px;
+	border: 1px solid black;
+}
+.tourney-container td { padding: 3px }
+
+.tourney-container input[type="checkbox"] {
+	margin-right: 20px;
+	vertical-align: sub;
 }
 
 .tourney-menu {
   background-color: #D5EBED;
-  height: 26px;
-  padding-top: 3px;
 }
 
 .headline h2 {

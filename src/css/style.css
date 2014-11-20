@@ -37,10 +37,17 @@ body {
 .tourney-lost { color: red }
 .tourney-won { color: green }
 .tourney-willFace { font-weight: bold }
-/* .tourney-menu { text-align: center } */
+.tourney-menu {
+	overflow: auto;
+}
+
+.tourney-menu >* {
+	vertical-align: center;
+}
+
 table.tourney-outerTable { margin-top: 10px; }
 .tourney-header { font-weight: bold; font-style: italic; font-size: 1.2em }
-.tourney-FilterBox { float: right } 
+.tourney-filterBox { float: right } 
 .tourney-container {
 	float: right;
 	display: inline-block;
