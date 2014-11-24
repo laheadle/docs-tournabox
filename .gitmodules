@@ -1,0 +1,4 @@
+[submodule "tournabox"]
+	path = tournabox
+	url = https://github.com/laheadle/docs-tournabox.git
+

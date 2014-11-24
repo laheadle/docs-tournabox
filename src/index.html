@@ -1,0 +1,73 @@
+<page title="tournabox"
+main="true"
+>
+
+
+    <!-- Full Width Image Header -->
+    <header class="header-image">
+        <div class="headline">
+            <div class="container">
+                <h1>Tournabox</h1>
+                <h2>Dynamic Display of Single-Elimination Tournaments</h2>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <hr class="featurette-divider"/>
+
+        <!-- First Featurette -->
+        <div class="featurette" id="about">
+ 
+			<div class="tourney-container" id="men-usopen-2014"></div>
+
+            <h2 class="featurette-heading">Give your readers
+                <span class="text-muted">a dynamic view of tournaments</span>
+            </h2>
+            <p class="lead">Tournament results can be grouped by Round, Performance, Country, and Seed; and filtered to
+			  show matching results.</p>
+        </div>
+
+        <hr class="featurette-divider"/>
+
+        <!-- Second Featurette -->
+        <div class="featurette" id="services">
+		  <div class="tourney-container" id="women-usopen-2014"></div>
+            <h2 class="featurette-heading">Show tournaments
+                <span class="text-muted">as they happen.</span>
+            </h2>
+            <p class="lead">tournabox will display upcoming matches and already completed ones.</p>
+        </div>
+
+        <hr class="featurette-divider"/>
+
+        <!-- Third Featurette -->
+        <div class="featurette" id="contact">
+		  <div class="tourney-container" id="prefiltered-women-usopen-2014"
+			   tourney-entries="women-usopen-2014-entries"
+			   tourney-outcomes="women-usopen-2014-outcomes"
+			   tourney-groups="By Country" tourney-filters="russia,serbia"></div>
+            <h2 class="featurette-heading">Point your readers
+                <span class="text-muted">toward specific results</span>
+            </h2>
+            <p class="lead">Choose the groups and filters that
+            visitors will see. The tournabox to the right displays all
+            matches played by Russian and Serbian players. </p>
+        </div>
+
+        <hr class="featurette-divider"/>
+
+    </div>
+
+
+	<include file="data/women-usopen-2014-entries.html"/>
+	<include file="data/women-usopen-2014-outcomes.html"/>
+	<include file="data/women-usopen-2014-outcomes-few.html"/>
+	<include file="data/men-usopen-2014-entries.html"/>
+	<include file="data/men-usopen-2014-outcomes.html"/>
+
+    <script src="js/tourney.js"></script>
+
+</page>
