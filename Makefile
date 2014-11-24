@@ -1,7 +1,7 @@
 all:
 	cp tournabox/tourney.js src/js
-	stog src -d site --tmpl src/.stog/templates/
-	cp -rf site/* ~/Downloads/tournabox 
+	stog src -d . --tmpl src/.stog/templates/
+	cp -rf * ~/Downloads/tournabox 
 
 submodules:
 	git submodule foreach git pull
