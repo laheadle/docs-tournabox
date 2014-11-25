@@ -1,0 +1,73 @@
+<page title="tournabox manual"
+	  with-contents="true">
+  <!-- Page Content -->
+  <contents>
+
+    <div class="container">
+
+	  <h2>Getting Started</h2>
+
+	  Imagine a small tournament called the "utopian open." You need three HTML elements to display it as a tournabox.
+
+	  <h3>Element 1: The Container</h3>
+	  <p>This is the element your readers will see, containing the tournament results. It looks like this:</p>
+
+	  <hcode lang="xml" defer_="1"><include raw="true" file="data/utopian-open-container.html"/></hcode>
+	  <p> The container <emph>must</emph> have class
+	  tourney-container.</p>
+
+	  <h3>Element 2: The Entries</h3>
+	  <p>This element contains the names of all the entries (players
+	  or teams) in the tournament. Entries are listed in order: the
+	  first entry plays the second entry, the third entry plays the
+	  fourth entry, etc. In the second round, the winner of the match
+	  between #1 and #2 will play the winner of the match between #3
+	  and #4, etc.</p>
+
+	  <hcode lang="xml" defer_="1"><include raw="true" file="data/utopian-open-entries.html"/></hcode>
+	  <p> An entry looks like this: </p>
+	  
+	  <P>NAME OPTIONAL-COUNTRY [OPTIONAL-SEED] (OPTIONAL ATTRIBUTE)</P>
+	  <p> Where the optional country is a three letter country code,
+	  the optional seed is a number, and the optional attribute is a
+	  letter, such as 'w' for "withdrew" or 'q' for "qualifier." </p>
+	  
+	  <p> The entries are found by starting from the id of the container,
+		namely "utopian-open," and adding the string "-entries." Thus, by giving the entries element the id
+		"utopian-open-entries," you tell tournabox that this element contains the entries for the container "utopian-open." </p>
+
+	  <p> You <emph>should</emph> hide this element by using <icode>style="display: none"</icode> as in the example above.</p>
+
+	  <h3>Element 3: The Outcomes</h3>
+	  <hcode lang="xml" defer_="1"><include raw="true" file="data/utopian-open-outcomes.html"/></hcode>
+	  <p> The outcomes are found by starting from the id of the container,
+		namely "utopian-open," and adding the string "-outcomes." Thus, by
+		giving the outcomes element the id "utopian-open-outcomes," you tell
+		tournabox that this element contains the outcomes for the container
+		"utopian-open." </p>
+
+	  <include file="data/utopian-open-container.html"/>
+	  <include file="data/utopian-open-entries.html"/>
+	  <include file="data/utopian-open-outcomes.html"/>
+
+	  <p></p>
+
+	  <h2>Setting Groups and Filters</h2>
+	  <p></p>
+
+	  <h2>Multiple Tournaboxes for a Single Tournament</h2>
+	  <p></p>
+
+	  <h2>Custom Styles</h2>
+	  <h2></h2>
+
+	  <include file="data/women-usopen-2014-outcomes.html"/>
+	  <include file="data/women-usopen-2014-outcomes-few.html"/>
+	  <include file="data/men-usopen-2014-entries.html"/>
+	  <include file="data/men-usopen-2014-outcomes.html"/>
+
+	</div>
+
+    <script src="/docs-tournabox/js/tourney.js"></script>
+  </contents>
+</page>
