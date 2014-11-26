@@ -72,7 +72,7 @@
 </span><span class="hl kwa">&lt;/div</span><span class="hl kwa">&gt;</span><span class="hl std">
 </span></pre>
 	  <p> The container <b><i>must</i></b> have class
-	  tourney-container.</p>
+	  <span class="icode"><span class="hl std">tourney-container.</span></span></p> The id is used to find the entry and outcome elements (see below).
 
 	  <h3>Element 2: The Entries</h3>
 	  <p>This element contains the names of all the entries (players
@@ -101,8 +101,9 @@ GARCIA-LOPEZ, Guillermo ESP [28]
 	  letter, such as 'w' for &quot;withdrew&quot; or 'q' for &quot;qualifier.&quot; </p>
 	  
 	  <p> The entries are found by starting from the id of the container,
-		namely &quot;utopian-open,&quot; and adding the string &quot;-entries.&quot; Thus, by giving the entries element the id
-		&quot;utopian-open-entries,&quot; you tell tournabox that this element contains the entries for the container &quot;utopian-open.&quot; </p>
+		namely <span class="icode"><span class="hl std">&quot;utopian-open,&quot;</span></span> and adding the string <span class="icode"><span class="hl std">&quot;-entries.&quot;</span></span> Thus, by giving the entries element the id
+		<span class="icode"><span class="hl std">&quot;utopian-open-entries,&quot;</span></span> you tell tournabox that this
+		element contains the entries for the container <span class="icode"><span class="hl std">&quot;utopian-open.&quot;</span></span> </p>
 
 	  <p> You <b><i>should</i></b> hide this element by using <span class="icode"><span class="hl std">style=&quot;display: none&quot;</span></span> as in the example above.</p>
 

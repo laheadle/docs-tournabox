@@ -45,6 +45,18 @@ body {
 	vertical-align: center;
 }
 
+p {
+	line-height: 2;
+}
+
+.icode {	
+	color: #333;
+	background-color: #f5f5f5;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	padding: 3px;
+}
+
 table.tourney-outerTable { margin-top: 10px; }
 .tourney-header { font-weight: bold; font-style: italic; font-size: 1.2em }
 .tourney-filterBox { float: right } 

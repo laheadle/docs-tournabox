@@ -14,7 +14,7 @@
 
 	  <hcode lang="xml" defer_="1"><include raw="true" file="data/utopian-open-container.html"/></hcode>
 	  <p> The container <emph>must</emph> have class
-	  tourney-container.</p>
+	  <ic>tourney-container.</ic></p> The id is used to find the entry and outcome elements (see below).
 
 	  <h3>Element 2: The Entries</h3>
 	  <p>This element contains the names of all the entries (players
@@ -33,10 +33,11 @@
 	  letter, such as 'w' for "withdrew" or 'q' for "qualifier." </p>
 	  
 	  <p> The entries are found by starting from the id of the container,
-		namely "utopian-open," and adding the string "-entries." Thus, by giving the entries element the id
-		"utopian-open-entries," you tell tournabox that this element contains the entries for the container "utopian-open." </p>
+		namely <ic>"utopian-open,"</ic> and adding the string <ic>"-entries."</ic> Thus, by giving the entries element the id
+		<ic>"utopian-open-entries,"</ic> you tell tournabox that this
+		element contains the entries for the container <ic>"utopian-open."</ic> </p>
 
-	  <p> You <emph>should</emph> hide this element by using <icode>style="display: none"</icode> as in the example above.</p>
+	  <p> You <emph>should</emph> hide this element by using <ic>style="display: none"</ic> as in the example above.</p>
 
 	  <h3>Element 3: The Outcomes</h3>
 	  <hcode lang="xml" defer_="1"><include raw="true" file="data/utopian-open-outcomes.html"/></hcode>
