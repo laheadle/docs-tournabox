@@ -49,18 +49,40 @@ p {
 	line-height: 2;
 }
 
+.hl.kwa {
+color: #1c45d6;
+/* font-weight: bold; */
+}
 .icode {	
-	color: #333;
+	color: #d14;
 	background-color: #f5f5f5;
 	border: 1px solid #ccc;
-	border-radius: 4px;
-	padding: 3px;
+	border-radius: 3px;
+	padding: 2px 4px;
 }
 
 table.tourney-outerTable { margin-top: 10px; }
 .tourney-header { font-weight: bold; font-style: italic; font-size: 1.2em }
 .tourney-filterBox { float: right } 
+
+.section-title, .subsection-title {
+	margin: 10px 0;
+}
+
+
+.section-title { font-size: 24px; }
+.subsection-title { font-size: 20px; }
+
 .tourney-container {
+	display: inline-block;
+	padding: 10px;
+	height: 400px;
+	overflow: scroll;
+	width: 700px;
+	border: 1px solid black;
+}
+
+.marketing .tourney-container {
 	float: right;
 	display: inline-block;
 	padding: 10px;
