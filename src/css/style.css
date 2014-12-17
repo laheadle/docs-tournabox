@@ -34,14 +34,14 @@ body {
     background: rgba(255,255,255,0.7);
 }
 
-.tourney-lost { color: red }
-.tourney-won { color: green }
-.tourney-willFace { font-weight: bold }
-.tourney-menu {
+.tournabox-lost { color: red }
+.tournabox-won { color: green }
+.tournabox-willFace { font-weight: bold }
+.tournabox-menu {
 	overflow: auto;
 }
 
-.tourney-menu >* {
+.tournabox-menu >* {
 	vertical-align: center;
 }
 
@@ -61,9 +61,9 @@ color: #1c45d6;
 	padding: 2px 4px;
 }
 
-table.tourney-outerTable { margin-top: 10px; }
-.tourney-header { font-weight: bold; font-style: italic; font-size: 1.2em }
-.tourney-filterBox { float: right } 
+table.tournabox-outerTable { margin-top: 10px; }
+.tournabox-header { font-weight: bold; font-style: italic; font-size: 1.2em }
+.tournabox-filterBox { float: right } 
 
 .section-title, .subsection-title {
 	margin: 10px 0;
@@ -73,7 +73,7 @@ table.tourney-outerTable { margin-top: 10px; }
 .section-title { font-size: 24px; }
 .subsection-title { font-size: 20px; }
 
-.tourney-container {
+.tournabox-container {
 	display: inline-block;
 	padding: 10px;
 	height: 400px;
@@ -82,7 +82,9 @@ table.tourney-outerTable { margin-top: 10px; }
 	border: 1px solid black;
 }
 
-.marketing .tourney-container {
+.marketing { margin: 0 10px; }
+
+.marketing .tournabox-container {
 	float: right;
 	display: inline-block;
 	padding: 10px;
@@ -91,14 +93,14 @@ table.tourney-outerTable { margin-top: 10px; }
 	width: 700px;
 	border: 1px solid black;
 }
-.tourney-container td { padding: 3px }
+.tournabox-container td { padding: 3px }
 
-.tourney-container input[type="checkbox"] {
+.tournabox-container input[type="checkbox"] {
 	margin-right: 20px;
 	vertical-align: sub;
 }
 
-.tourney-menu {
+.tournabox-menu {
   background-color: #D5EBED;
 }
 

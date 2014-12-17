@@ -17,7 +17,7 @@
 
 			<hcode lang="xml" defer_="1"><include raw="true" file="data/utopian-open-container.html"/></hcode>
 			<p> The container <emph>must</emph> have class
-			  <ic>tourney-container.</ic></p> The id is used to find the entry and outcome elements (see below).
+			  <ic>tournabox-container.</ic></p> The id is used to find the entry and outcome elements (see below).
 		  </subsection>
 
 		  <subsection id="the-entries" title="Element 2: The Entries">
@@ -37,7 +37,7 @@
 			  letter, such as 'w' for "withdrew" or 'q' for "qualifier." </p>
 			
 			<p> The entries are found by starting from the id of the container,
-			  namely <ic>"utopian-open,"</ic> and adding the string <ic>"-entries."</ic> Thus, by giving the entries element the id
+			  here <ic>"utopian-open,"</ic> and adding the string <ic>"-entries."</ic> Thus, by giving the entries element the id
 			  <ic>"utopian-open-entries,"</ic> you tell tournabox which
 			  element contains the entries for the container <ic>"utopian-open."</ic> </p>
 
@@ -48,7 +48,7 @@
 			<p>This element contains the record of wins and losses. Each
 			  line lists the name of a winner.</p>
 			<p> The name can be abbreviated
-			  to save timing, as long as there is only one name matching the
+			  to save typing, as long as there is only one name matching the
 			  abbreviation. Abbreviations can come from anywhere in the
 			  name, and case does not matter. For example, to abbreviate
 			  "Joe Smith" you could enter "joe" or "smith".</p>
@@ -59,7 +59,7 @@
 
 			<hcode lang="xml" defer_="1"><include raw="true" file="data/utopian-open-outcomes.html"/></hcode>
 			<p> The outcomes are found by starting from the id of the container,
-			  namely <ic>"utopian-open,"</ic> and adding the string <ic>"-outcomes".</ic> Thus, by
+			  here <ic>"utopian-open,"</ic> and adding the string <ic>"-outcomes".</ic> Thus, by
 			  giving the outcomes element the id <ic>"utopian-open-outcomes,"</ic> you tell
 			  tournabox which element contains the outcomes for the container
 			  "utopian-open." </p>
@@ -83,12 +83,12 @@
 		  grouping a tournabox -- in a different order. Other times,
 		  you don't want to show as many ways of grouping a
 		  tournabox. You can do either by adding the
-		  attribute <ic>tourney-groups</ic> to your container
+		  attribute <ic>tournabox-groups</ic> to your container
 		  element.</p> This attribute's content is the name and order
 		  of the grouping checkboxes you want to show.
 
 		  <p> You can also set the initial filter string using the
-		  attribute <ic>tourney-filters</ic>.To give more than one
+		  attribute <ic>tournabox-filters</ic>.To give more than one
 		  filter string, separate each filter string by a comma, as
 		  in <ic>term 1,term2</ic>. Matches will be shown if they
 		  match any of the strings.</p>
@@ -116,6 +116,6 @@
 	  </prepare-toc>
 	</div>
 
-    <script src="/docs-tournabox/js/tourney.js"></script>
+    <script src="/docs-tournabox/js/tournabox.js"></script>
   </contents>
 </page>

@@ -82,6 +82,8 @@ table.tourney-outerTable { margin-top: 10px; }
 	border: 1px solid black;
 }
 
+.marketing { margin: 0 10px; }
+
 .marketing .tourney-container {
 	float: right;
 	display: inline-block;
