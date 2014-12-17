@@ -1,0 +1,38 @@
+/* -*- mode: css -*- */
+.tournabox-container .tournabox-root .tournabox-menu-wrapper {
+  background-color: #D5EBED;
+}
+.tournabox-container .tournabox-root .tournabox-menu-wrapper .tournabox-menu {
+  padding: 6px;
+}
+.tournabox-container .tournabox-root .tournabox-menu-wrapper .tournabox-menu .tournabox-filter-span {
+  float: right;
+}
+.tournabox-container .tournabox-root .tournabox-menu-wrapper .tournabox-menu input[type="checkbox"] {
+  margin: 0 20px 0 0;
+  vertical-align: middle;
+}
+.tournabox-container .tournabox-root .tournabox-menu-wrapper .tournabox-menu .tournabox-filter-input {
+  border-radius: 5px;
+}
+.tournabox-container .tournabox-root .tournabox-outer-table {
+  margin-top: 10px;
+}
+.tournabox-container .tournabox-root .tournabox-outer-table .tournabox-header-row .tournabox-header {
+  font-weight: bold;
+  font-style: italic;
+  font-size: 1.2em;
+}
+.tournabox-container .tournabox-root .tournabox-outer-table .tournabox-row .tournabox-cell {
+  font-style: italic;
+  padding: 2px 1px 1px 1px;
+}
+.tournabox-container .tournabox-root .tournabox-outer-table .tournabox-row .tournabox-lost {
+  color: red;
+}
+.tournabox-container .tournabox-root .tournabox-outer-table .tournabox-row .tournabox-won {
+  color: green;
+}
+.tournabox-container .tournabox-root .tournabox-outer-table .tournabox-row .tournabox-willFace {
+  color: blue;
+}

@@ -1,5 +1,6 @@
 all:
-	cp tournabox/tourney.js src/js
+	cp tournabox/tournabox.js src/js
+	cp tournabox/tournabox.css src/css
 	stog src -d . --tmpl src/.stog/templates/
 	cp -rf * ~/Downloads/docs-tournabox 
 
