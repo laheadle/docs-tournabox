@@ -68,17 +68,6 @@ color: #1c45d6;
 	overflow: scroll;
 }
 
-.tournabox-container td { padding: 3px }
-
-.tournabox-container input[type="checkbox"] {
-	margin-right: 20px;
-	vertical-align: sub;
-}
-
-.tournabox-menu {
-  background-color: #D5EBED;
-}
-
 .headline h2 {
     font-size: 77px;
     background: #fff;
