@@ -12,6 +12,7 @@
   border: 1px solid green;
   font-size: 14px;
   display: inline-block;
+  color: black;
 }
 .tournabox-container .tournabox-root .tournabox-menu-wrapper {
   background-color: #D5EBED;
@@ -28,6 +29,9 @@
 }
 .tournabox-container .tournabox-root .tournabox-menu-wrapper .tournabox-menu .tournabox-filter-input {
   border-radius: 5px;
+}
+.tournabox-container .tournabox-root table {
+  border-collapse: separate;
 }
 .tournabox-container .tournabox-root .tournabox-group {
   margin-top: 10px;

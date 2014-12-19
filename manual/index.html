@@ -63,7 +63,7 @@
     <div class="container">
 	  <h1>Tournabox: The Manual</h1>
 	  
-		<h3>Contents</h3><ul class="toc"><li class="toc-section"><a href="https://laheadle.github.io/docs-tournabox/manual/#getting-started">Getting Started</a><ul class="toc"><li class="toc-subsection"><a href="https://laheadle.github.io/docs-tournabox/manual/#the-container">Element 1: The Container</a></li><li class="toc-subsection"><a href="https://laheadle.github.io/docs-tournabox/manual/#the-entries">Element 2: The Entries</a></li><li class="toc-subsection"><a href="https://laheadle.github.io/docs-tournabox/manual/#the-outcomes">Element 3: The Outcomes</a></li><li class="toc-subsection"><a href="https://laheadle.github.io/docs-tournabox/manual/#what-you-see">The Resulting Tournabox</a></li></ul></li><li class="toc-section"><a href="https://laheadle.github.io/docs-tournabox/manual/#multiple-tournaboxes">Multiple Tournaboxes for a Single Tournament</a></li><li class="toc-section"><a href="https://laheadle.github.io/docs-tournabox/manual/#setting-groups-and-filters">Setting Groups and Filters</a><ul class="toc"><li class="toc-subsection"><a href="https://laheadle.github.io/docs-tournabox/manual/#what-you-see-seeded">The Resulting Tournabox</a></li></ul></li><li class="toc-section"><a href="https://laheadle.github.io/docs-tournabox/manual/#custom-styles">Custom Styles</a></li></ul>
+		<h3>Contents</h3><ul class="toc"><li class="toc-section"><a href="https://laheadle.github.io/docs-tournabox/manual/#getting-started">Getting Started</a><ul class="toc"><li class="toc-subsection"><a href="https://laheadle.github.io/docs-tournabox/manual/#the-container">Element 1: The Container</a></li><li class="toc-subsection"><a href="https://laheadle.github.io/docs-tournabox/manual/#the-entries">Element 2: The Entries</a></li><li class="toc-subsection"><a href="https://laheadle.github.io/docs-tournabox/manual/#the-outcomes">Element 3: The Outcomes</a></li><li class="toc-subsection"><a href="https://laheadle.github.io/docs-tournabox/manual/#what-you-see">The Resulting Tournabox</a></li></ul></li><li class="toc-section"><a href="https://laheadle.github.io/docs-tournabox/manual/#multiple-tournaboxes">Multiple Tournaboxes for a Single Tournament</a></li><li class="toc-section"><a href="https://laheadle.github.io/docs-tournabox/manual/#connecting">Connecting Containers to Entries and Outcomes</a></li><li class="toc-section"><a href="https://laheadle.github.io/docs-tournabox/manual/#setting-groups-and-filters">Setting Groups and Filters</a><ul class="toc"><li class="toc-subsection"><a href="https://laheadle.github.io/docs-tournabox/manual/#what-you-see-seeded">The Resulting Tournabox</a></li></ul></li><li class="toc-section"><a href="https://laheadle.github.io/docs-tournabox/manual/#custom-styles">Custom Styles</a></li></ul>
 
 
 		<div class="section"><div class="section-title" id="getting-started">Getting Started</div>
@@ -215,10 +215,39 @@ GARCIA-LOPEZ, Guillermo ESP [28]
 		  <p></p>
 		</div>
 
+		<p> Sometimes, you want to show several tournaboxes for a
+		single tournament. You might be blogging a tournament and
+		giving several updates a day, as the tournament progresses. Or
+		you might want to analyze a tournament from different angles,
+		using different tournaboxes to focus on different aspects of
+		play. </p>
+
+		<div class="section"><div class="section-title" id="connecting">Connecting Containers to Entries and Outcomes</div>
+		  <p>
+			In these situations, tournabox's default connection between
+			a container and its entries and outcomes is
+			insufficient. You need a way of saying, &quot;I want this
+			container to use these entries and these outcomes.&quot; You can do this by setting the attributes
+			<pre class="code-txt"><span class="hl std">tournabox-entries</span></pre>
+			and <pre class="code-txt"><span class="hl std">tournabox-outcomes</span></pre> on your container
+			element. If you do this, tournabox will ignore your
+			container's id. Rather than looking for entries and
+			outcomes based on your container's it, tournabox will look
+			for elements whose id's equal the values of
+			<pre class="code-txt"><span class="hl std">tournabox-entries</span></pre>
+			and <pre class="code-txt"><span class="hl std">tournabox-outcomes</span></pre>. When it finds these
+			elements, tournabox will connect them to your
+			container. If no elements with these id's exist, tournabox
+			will complain.
+		  </p>
+
+		  <p>See below for an example.</p>
+		</div>
+
 		<div class="section"><div class="section-title" id="setting-groups-and-filters">Setting Groups and Filters</div>
-		  <p>Sometimes, you want to show the checkboxes -- the ways of
-		  grouping a tournabox -- in a different order. Other times,
-		  you don't want to show as many ways of grouping a
+		  <p>Sometimes, you want to show the grouping checkboxes -- the
+		  ways of grouping a tournabox -- in a different order. Other
+		  times, you don't want to show too many ways of grouping a
 		  tournabox. You can do either by adding the
 		  attribute <span class="icode"><span class="hl std">tournabox-groups</span></span> to your container
 		  element.</p> This attribute's content is the name and order
@@ -231,8 +260,8 @@ GARCIA-LOPEZ, Guillermo ESP [28]
 		  match any of the strings.</p>
 
 		  <p> Here's an example which only shows the &quot;by country&quot; and
-			&quot;By seed&quot;, in that order, with an initial filter showing
-			Russian and Serbian players.
+			&quot;By seed&quot; group checkboxes, in that order, with an initial
+			filter showing Russian and Serbian players.
 		  </p>
 		  <pre class="code-xml"><span class="hl kwa">&lt;div</span><span class="hl std"> </span><span class="">class</span><span class="hl std">=</span><span class="hl str">&quot;tournabox-container&quot;</span><span class="hl std">
 	 </span><span class="">tournabox-entries</span><span class="hl std">=</span><span class="hl str">&quot;women-usopen-2014-entries&quot;</span><span class="hl std">
