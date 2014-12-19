@@ -48,18 +48,15 @@
 			  extend the bye to the second round, and so on for 4, 8,
 			  16, etc. For example, if a tournabox has the following
 			  entries:
-			  <pre>
-				-bye-
-				-bye-
-				-bye-
-				b
-				c
-				d
-				e
-				f
-			  </pre>
+			  <hcode lang="xml" defer_="1"><include raw="true" file="data/bye-example-entries.html"/></hcode>
 			  Then <ic>b</ic> will get a bye in the first and second rounds.
 			</p>
+
+			<p> The resulting tournabox at the beginning of the tournament, before any contests are decided: </p>
+
+			<include file="data/bye-example-container.html"/>
+			<include file="data/bye-example-entries.html"/>
+			<include file="data/bye-example-outcomes.html"/>
 
 			<p> You <emph>should</emph> hide this element by using <ic>style="display: none"</ic> as in the example above.</p>
 		  </subsection>
@@ -98,10 +95,39 @@
 		  <p></p>
 		</section>
 
+		<p> Sometimes, you want to show several tournaboxes for a
+		single tournament. You might be blogging a tournament and
+		giving several updates a day, as the tournament progresses. Or
+		you might want to analyze a tournament from different angles,
+		using different tournaboxes to focus on different aspects of
+		play. </p>
+
+		<section id="setting-groups-and-filters" title="Connecting Containers to Entries and Outcomes">
+		  <p>
+			In these situations, tournabox's default connection between
+			a container and its entries and outcomes is
+			insufficient. You need a way of saying, "I want this
+			container to use these entries and these outcomes." You can do this by setting the attributes
+			<hcode>tournabox-entries</hcode>
+			and <hcode>tournabox-outcomes</hcode> on your container
+			element. If you do this, tournabox will ignore your
+			container's id. Rather than looking for entries and
+			outcomes based on your container's it, tournabox will look
+			for elements whose id's equal the values of
+			<hcode>tournabox-entries</hcode>
+			and <hcode>tournabox-outcomes</hcode>. When it finds these
+			elements, tournabox will connect them to your
+			container. If no elements with these id's exist, tournabox
+			will complain.
+		  </p>
+
+		  <p>See below for an example.</p>
+		</section>
+
 		<section id="setting-groups-and-filters" title="Setting Groups and Filters">
-		  <p>Sometimes, you want to show the checkboxes -- the ways of
-		  grouping a tournabox -- in a different order. Other times,
-		  you don't want to show as many ways of grouping a
+		  <p>Sometimes, you want to show the grouping checkboxes -- the
+		  ways of grouping a tournabox -- in a different order. Other
+		  times, you don't want to show too many ways of grouping a
 		  tournabox. You can do either by adding the
 		  attribute <ic>tournabox-groups</ic> to your container
 		  element.</p> This attribute's content is the name and order
@@ -114,8 +140,8 @@
 		  match any of the strings.</p>
 
 		  <p> Here's an example which only shows the "by country" and
-			"By seed", in that order, with an initial filter showing
-			Russian and Serbian players.
+			"By seed" group checkboxes, in that order, with an initial
+			filter showing Russian and Serbian players.
 		  </p>
 		  <hcode lang="xml" defer_="1"><include raw="true" file="data/russian-serbian-country-seed.html"/></hcode>
 

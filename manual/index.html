@@ -111,6 +111,47 @@ GARCIA-LOPEZ, Guillermo ESP [28]
 			  <span class="icode"><span class="hl std">&quot;utopian-open-entries,&quot;</span></span> you tell tournabox which
 			  element contains the entries for the container <span class="icode"><span class="hl std">&quot;utopian-open.&quot;</span></span> </p>
 
+			<p> As a special case, you may enter the
+			  phrase <span class="icode"><span class="hl std">-bye-</span></span> as an entry. This means that the
+			  player who plays against this entry has a &quot;bye,&quot; and
+			  will automatically win. Two byes next to each other will
+			  extend the bye to the second round, and so on for 4, 8,
+			  16, etc. For example, if a tournabox has the following
+			  entries:
+			  <pre class="code-xml"><span class="hl kwa">&lt;pre</span><span class="hl std"> </span><span class="">style</span><span class="hl std">=</span><span class="hl str">&quot;display: none&quot;</span><span class="hl std"> </span><span class="">id</span><span class="hl std">=</span><span class="hl str">&quot;bye-example-entries&quot;</span><span class="hl kwa">&gt;</span><span class="hl std">
+-bye-
+-bye-
+-bye-
+b
+c
+d
+e
+f
+</span><span class="hl kwa">&lt;/pre</span><span class="hl kwa">&gt;</span><span class="hl std">
+</span></pre>
+			  Then <span class="icode"><span class="hl std">b</span></span> will get a bye in the first and second rounds.
+			</p>
+
+			<p> The resulting tournabox at the beginning of the tournament, before any contests are decided: </p>
+
+			<div class="tournabox-container" id="bye-example" tournabox-groups="By Round">
+</div>
+
+			<pre id="bye-example-entries" style="display: none">
+-bye-
+-bye-
+-bye-
+b
+c
+d
+e
+f
+</pre>
+
+			<pre id="bye-example-outcomes" style="display: none">
+</pre>
+
+
 			<p> You <b><i>should</i></b> hide this element by using <span class="icode"><span class="hl std">style=&quot;display: none&quot;</span></span> as in the example above.</p>
 		  </div>
 
