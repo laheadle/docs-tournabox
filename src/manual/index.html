@@ -41,6 +41,26 @@
 			  <ic>"utopian-open-entries,"</ic> you tell tournabox which
 			  element contains the entries for the container <ic>"utopian-open."</ic> </p>
 
+			<p> As a special case, you may enter the
+			  phrase <ic>-bye-</ic> as an entry. This means that the
+			  player who plays against this entry has a "bye," and
+			  will automatically win. Two byes next to each other will
+			  extend the bye to the second round, and so on for 4, 8,
+			  16, etc. For example, if a tournabox has the following
+			  entries:
+			  <pre>
+				-bye-
+				-bye-
+				-bye-
+				b
+				c
+				d
+				e
+				f
+			  </pre>
+			  Then <ic>b</ic> will get a bye in the first and second rounds.
+			</p>
+
 			<p> You <emph>should</emph> hide this element by using <ic>style="display: none"</ic> as in the example above.</p>
 		  </subsection>
 
@@ -51,14 +71,14 @@
 			  to save typing, as long as there is only one name matching the
 			  abbreviation. Abbreviations can come from anywhere in the
 			  name, and case does not matter. For example, to abbreviate
-			  "Joe Smith" you could enter "joe" or "smith".</p>
+			  "Joe Smith" you could enter "joe" or "mith".</p>
 
 			<p> Note that Sam Querrey (abbreviated 'qu') is listed
 			twice. This means that he won in the first round, <emph>
 			and then won again </emph> in the second round.</p>
 
 			<hcode lang="xml" defer_="1"><include raw="true" file="data/utopian-open-outcomes.html"/></hcode>
-			<p> The outcomes are found by starting from the id of the container,
+			<p> Much like entries, outcomes are found by starting from the id of the container,
 			  here <ic>"utopian-open,"</ic> and adding the string <ic>"-outcomes".</ic> Thus, by
 			  giving the outcomes element the id <ic>"utopian-open-outcomes,"</ic> you tell
 			  tournabox which element contains the outcomes for the container

@@ -17,6 +17,8 @@
     
     <link href="/docs-tournabox/css/style.css" rel="stylesheet"/>
 
+    <link href="/docs-tournabox/css/tournabox.css" rel="stylesheet"/>
+
     
     
     
@@ -71,11 +73,11 @@
 		  <div class="subsection"><div class="subsection-title" id="the-container">Element 1: The Container</div>
 			<p>This is the element your readers will see, containing the tournament results. It looks like this:</p>
 
-			<pre class="code-xml"><span class="hl kwa">&lt;div</span><span class="hl std"> </span><span class="">class</span><span class="hl std">=</span><span class="hl str">&quot;tourney-container&quot;</span><span class="hl std"> </span><span class="">id</span><span class="hl std">=</span><span class="hl str">&quot;utopian-open&quot;</span><span class="hl kwa">&gt;</span><span class="hl std">
+			<pre class="code-xml"><span class="hl kwa">&lt;div</span><span class="hl std"> </span><span class="">class</span><span class="hl std">=</span><span class="hl str">&quot;tournabox-container&quot;</span><span class="hl std"> </span><span class="">id</span><span class="hl std">=</span><span class="hl str">&quot;utopian-open&quot;</span><span class="hl kwa">&gt;</span><span class="hl std">
 </span><span class="hl kwa">&lt;/div</span><span class="hl kwa">&gt;</span><span class="hl std">
 </span></pre>
 			<p> The container <b><i>must</i></b> have class
-			  <span class="icode"><span class="hl std">tourney-container.</span></span></p> The id is used to find the entry and outcome elements (see below).
+			  <span class="icode"><span class="hl std">tournabox-container.</span></span></p> The id is used to find the entry and outcome elements (see below).
 		  </div>
 
 		  <div class="subsection"><div class="subsection-title" id="the-entries">Element 2: The Entries</div>
@@ -119,7 +121,7 @@ GARCIA-LOPEZ, Guillermo ESP [28]
 			  to save typing, as long as there is only one name matching the
 			  abbreviation. Abbreviations can come from anywhere in the
 			  name, and case does not matter. For example, to abbreviate
-			  &quot;Joe Smith&quot; you could enter &quot;joe&quot; or &quot;smith&quot;.</p>
+			  &quot;Joe Smith&quot; you could enter &quot;joe&quot; or &quot;mith&quot;.</p>
 
 			<p> Note that Sam Querrey (abbreviated 'qu') is listed
 			twice. This means that he won in the first round, <b><i>
@@ -133,7 +135,7 @@ GARCIA-LOPEZ, Guillermo ESP [28]
   qu
 </span><span class="hl kwa">&lt;/pre</span><span class="hl kwa">&gt;</span><span class="hl std">
 </span></pre>
-			<p> The outcomes are found by starting from the id of the container,
+			<p> Much like entries, outcomes are found by starting from the id of the container,
 			  here <span class="icode"><span class="hl std">&quot;utopian-open,&quot;</span></span> and adding the string <span class="icode"><span class="hl std">&quot;-outcomes&quot;.</span></span> Thus, by
 			  giving the outcomes element the id <span class="icode"><span class="hl std">&quot;utopian-open-outcomes,&quot;</span></span> you tell
 			  tournabox which element contains the outcomes for the container
@@ -142,7 +144,7 @@ GARCIA-LOPEZ, Guillermo ESP [28]
 		  </div>
 
 		  <div class="subsection"><div class="subsection-title" id="what-you-see">The Resulting Tournabox</div>
-			<div class="tourney-container" id="utopian-open">
+			<div class="tournabox-container" id="utopian-open">
 </div>
 
 			<pre id="utopian-open-entries" style="display: none">
@@ -177,12 +179,12 @@ GARCIA-LOPEZ, Guillermo ESP [28]
 		  grouping a tournabox -- in a different order. Other times,
 		  you don't want to show as many ways of grouping a
 		  tournabox. You can do either by adding the
-		  attribute <span class="icode"><span class="hl std">tourney-groups</span></span> to your container
+		  attribute <span class="icode"><span class="hl std">tournabox-groups</span></span> to your container
 		  element.</p> This attribute's content is the name and order
 		  of the grouping checkboxes you want to show.
 
 		  <p> You can also set the initial filter string using the
-		  attribute <span class="icode"><span class="hl std">tourney-filters</span></span>.To give more than one
+		  attribute <span class="icode"><span class="hl std">tournabox-filters</span></span>.To give more than one
 		  filter string, separate each filter string by a comma, as
 		  in <span class="icode"><span class="hl std">term 1,term2</span></span>. Matches will be shown if they
 		  match any of the strings.</p>
@@ -191,14 +193,14 @@ GARCIA-LOPEZ, Guillermo ESP [28]
 			&quot;By seed&quot;, in that order, with an initial filter showing
 			Russian and Serbian players.
 		  </p>
-		  <pre class="code-xml"><span class="hl kwa">&lt;div</span><span class="hl std"> </span><span class="">class</span><span class="hl std">=</span><span class="hl str">&quot;tourney-container&quot;</span><span class="hl std">
-	 </span><span class="">tourney-entries</span><span class="hl std">=</span><span class="hl str">&quot;women-usopen-2014-entries&quot;</span><span class="hl std">
-	 </span><span class="">tourney-outcomes</span><span class="hl std">=</span><span class="hl str">&quot;women-usopen-2014-outcomes&quot;</span><span class="hl std">
-	 </span><span class="">tourney-groups</span><span class="hl std">=</span><span class="hl str">&quot;By Country,By Seed&quot;</span><span class="hl std"> </span><span class="">tourney-filters</span><span class="hl std">=</span><span class="hl str">&quot;russia,serbia&quot;</span><span class="hl kwa">&gt;</span><span class="hl kwa">&lt;/div</span><span class="hl kwa">&gt;</span><span class="hl std">
+		  <pre class="code-xml"><span class="hl kwa">&lt;div</span><span class="hl std"> </span><span class="">class</span><span class="hl std">=</span><span class="hl str">&quot;tournabox-container&quot;</span><span class="hl std">
+	 </span><span class="">tournabox-entries</span><span class="hl std">=</span><span class="hl str">&quot;women-usopen-2014-entries&quot;</span><span class="hl std">
+	 </span><span class="">tournabox-outcomes</span><span class="hl std">=</span><span class="hl str">&quot;women-usopen-2014-outcomes&quot;</span><span class="hl std">
+	 </span><span class="">tournabox-groups</span><span class="hl std">=</span><span class="hl str">&quot;By Country,By Seed&quot;</span><span class="hl std"> </span><span class="">tournabox-filters</span><span class="hl std">=</span><span class="hl str">&quot;russia,serbia&quot;</span><span class="hl kwa">&gt;</span><span class="hl kwa">&lt;/div</span><span class="hl kwa">&gt;</span><span class="hl std">
 </span></pre>
 
 		  <div class="subsection"><div class="subsection-title" id="what-you-see-seeded">The Resulting Tournabox</div>
-			<div class="tourney-container" tourney-entries="women-usopen-2014-entries" tourney-filters="russia,serbia" tourney-groups="By Country,By Seed" tourney-outcomes="women-usopen-2014-outcomes"></div>
+			<div class="tournabox-container" tournabox-entries="women-usopen-2014-entries" tournabox-filters="russia,serbia" tournabox-groups="By Country,By Seed" tournabox-outcomes="women-usopen-2014-outcomes"></div>
 
 		  </div>
 		  
@@ -733,7 +735,7 @@ CILIC, Mari
 	  
 	</div>
 
-    <script src="/docs-tournabox/js/tourney.js"></script>
+    <script src="/docs-tournabox/js/tournabox.js"></script>
   
     
     <script src="/docs-tournabox/js/jquery.js"></script>

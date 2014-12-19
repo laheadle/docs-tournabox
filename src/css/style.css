@@ -34,16 +34,6 @@ body {
     background: rgba(255,255,255,0.7);
 }
 
-.tournabox-lost { color: red }
-.tournabox-won { color: green }
-.tournabox-willFace { font-weight: bold }
-.tournabox-menu {
-	overflow: auto;
-}
-
-.tournabox-menu >* {
-	vertical-align: center;
-}
 
 p {
 	line-height: 2;
@@ -61,10 +51,6 @@ color: #1c45d6;
 	padding: 2px 4px;
 }
 
-table.tournabox-outerTable { margin-top: 10px; }
-.tournabox-header { font-weight: bold; font-style: italic; font-size: 1.2em }
-.tournabox-filterBox { float: right } 
-
 .section-title, .subsection-title {
 	margin: 10px 0;
 }
@@ -73,26 +59,15 @@ table.tournabox-outerTable { margin-top: 10px; }
 .section-title { font-size: 24px; }
 .subsection-title { font-size: 20px; }
 
-.tournabox-container {
-	display: inline-block;
-	padding: 10px;
-	height: 400px;
-	overflow: scroll;
-	width: 700px;
-	border: 1px solid black;
-}
-
 .marketing { margin: 0 10px; }
 
 .marketing .tournabox-container {
 	float: right;
 	display: inline-block;
-	padding: 10px;
 	height: 400px;
 	overflow: scroll;
-	width: 700px;
-	border: 1px solid black;
 }
+
 .tournabox-container td { padding: 3px }
 
 .tournabox-container input[type="checkbox"] {

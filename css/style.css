@@ -34,16 +34,6 @@ body {
     background: rgba(255,255,255,0.7);
 }
 
-.tourney-lost { color: red }
-.tourney-won { color: green }
-.tourney-willFace { font-weight: bold }
-.tourney-menu {
-	overflow: auto;
-}
-
-.tourney-menu >* {
-	vertical-align: center;
-}
 
 p {
 	line-height: 2;
@@ -61,10 +51,6 @@ color: #1c45d6;
 	padding: 2px 4px;
 }
 
-table.tourney-outerTable { margin-top: 10px; }
-.tourney-header { font-weight: bold; font-style: italic; font-size: 1.2em }
-.tourney-filterBox { float: right } 
-
 .section-title, .subsection-title {
 	margin: 10px 0;
 }
@@ -73,34 +59,23 @@ table.tourney-outerTable { margin-top: 10px; }
 .section-title { font-size: 24px; }
 .subsection-title { font-size: 20px; }
 
-.tourney-container {
-	display: inline-block;
-	padding: 10px;
-	height: 400px;
-	overflow: scroll;
-	width: 700px;
-	border: 1px solid black;
-}
-
 .marketing { margin: 0 10px; }
 
-.marketing .tourney-container {
+.marketing .tournabox-container {
 	float: right;
 	display: inline-block;
-	padding: 10px;
 	height: 400px;
 	overflow: scroll;
-	width: 700px;
-	border: 1px solid black;
 }
-.tourney-container td { padding: 3px }
 
-.tourney-container input[type="checkbox"] {
+.tournabox-container td { padding: 3px }
+
+.tournabox-container input[type="checkbox"] {
 	margin-right: 20px;
 	vertical-align: sub;
 }
 
-.tourney-menu {
+.tournabox-menu {
   background-color: #D5EBED;
 }
 

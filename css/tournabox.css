@@ -1,4 +1,18 @@
 /* -*- mode: css -*- */
+.tournabox-container {
+  /* fixme
+	& * { box-sizing: content-box; }
+    & *:after { box-sizing: content-box; }
+    & *:before { box-sizing: content-box; }
+*/
+}
+.tournabox-container .tournabox-root {
+  overflow: auto;
+  padding-bottom: 5px;
+  border: 1px solid green;
+  font-size: 14px;
+  display: inline-block;
+}
 .tournabox-container .tournabox-root .tournabox-menu-wrapper {
   background-color: #D5EBED;
 }
@@ -15,24 +29,57 @@
 .tournabox-container .tournabox-root .tournabox-menu-wrapper .tournabox-menu .tournabox-filter-input {
   border-radius: 5px;
 }
-.tournabox-container .tournabox-root .tournabox-outer-table {
+.tournabox-container .tournabox-root .tournabox-group {
   margin-top: 10px;
+  padding: 0 4px 0 4px;
 }
-.tournabox-container .tournabox-root .tournabox-outer-table .tournabox-header-row .tournabox-header {
+.tournabox-container .tournabox-root .tournabox-group .tournabox-header-row .tournabox-header {
   font-weight: bold;
   font-style: italic;
   font-size: 1.2em;
 }
-.tournabox-container .tournabox-root .tournabox-outer-table .tournabox-row .tournabox-cell {
-  font-style: italic;
-  padding: 2px 1px 1px 1px;
+.tournabox-container .tournabox-root .tournabox-group .tournabox-row {
+  vertical-align: baseline;
+  line-height: 1;
 }
-.tournabox-container .tournabox-root .tournabox-outer-table .tournabox-row .tournabox-lost {
+.tournabox-container .tournabox-root .tournabox-group .tournabox-row td {
+  min-width: 140px;
+}
+.tournabox-container .tournabox-root .tournabox-group .tournabox-row .tournabox-entry {
+  font-style: italic;
+  padding: 0 4px 0 0;
+}
+.tournabox-container .tournabox-root .tournabox-group .tournabox-row .tournabox-was-defeated-by {
   color: red;
 }
-.tournabox-container .tournabox-root .tournabox-outer-table .tournabox-row .tournabox-won {
+.tournabox-container .tournabox-root .tournabox-group .tournabox-row .tournabox-defeated {
   color: green;
 }
-.tournabox-container .tournabox-root .tournabox-outer-table .tournabox-row .tournabox-willFace {
+.tournabox-container .tournabox-root .tournabox-group .tournabox-row .tournabox-advanced {
+  color: green;
+  text-decoration: underline;
+}
+.tournabox-container .tournabox-root .tournabox-group .tournabox-row .tournabox-will-face {
   color: blue;
+}
+.tournabox-container .tournabox-root .tournabox-group .tournabox-row .tournabox-in-round .tournabox-round {
+  margin-left: 5px;
+  text-decoration: underline;
+  font-weight: bold;
+}
+.tournabox-container .tournabox-root .tournabox-group .tournabox-row .tournabox-country {
+  margin-left: 4px;
+  color: purple;
+  font-size: .8em;
+}
+.tournabox-container .tournabox-root .tournabox-group .tournabox-row .tournabox-seeded .tournabox-seed {
+  color: blue;
+  vertical-align: super;
+  font-size: .8em;
+}
+.tournabox-container .tournabox-root .tournabox-group .tournabox-row .tournabox-seeded .tournabox-seed:before {
+  content: ' [';
+}
+.tournabox-container .tournabox-root .tournabox-group .tournabox-row .tournabox-seeded .tournabox-seed:after {
+  content: ']';
 }
