@@ -42,23 +42,6 @@
 			  element contains the entries for the container <ic>"utopian-open."</ic>
 			  You <emph>should</emph> hide this element by using <ic>style="display: none"</ic> as in the example above.</p>
 
-			<p> As a special case, you may enter the
-			  phrase <ic>-bye-</ic> as an entry. This means that the
-			  player who plays against this entry has a "bye," and
-			  will automatically win. Two byes next to each other will
-			  extend the bye to the second round, and so on for 4, 8,
-			  16, etc. For example, if a tournabox has the following
-			  entries:
-			  <hcode lang="xml" defer_="1"><include raw="true" file="data/bye-example-entries.html"/></hcode>
-			  Then <ic>b</ic> will get a bye in the first and second rounds.
-			</p>
-
-			<p> The resulting tournabox at the beginning of the tournament, before any contests are decided: </p>
-
-			<include file="data/bye-example-container.html"/>
-			<include file="data/bye-example-entries.html"/>
-			<include file="data/bye-example-outcomes.html"/>
-
 		  </subsection>
 
 		  <subsection id="the-outcomes" title="Element 3: The Outcomes">
@@ -91,9 +74,29 @@
 
 		</section>
 
+		<section id="byes" title="Byes (Winning without playing)">
+
+			<p> As a special case, you may enter the
+			  phrase <ic>-bye-</ic> as an entry. This means that the
+			  player who plays against this entry has a "bye," and
+			  will automatically win. Two byes facing each other will
+			  extend the bye to the second round, and so on for 4, 8,
+			  16, etc. For example, if a tournabox has the following
+			  entries:
+			  <hcode lang="xml" defer_="1"><include raw="true" file="data/bye-example-entries.html"/></hcode>
+			  Then <ic>b</ic> will get a bye in the first and second rounds.
+			</p>
+
+			<p> The resulting tournabox at the beginning of the tournament, before any contests are decided: </p>
+
+			<include file="data/bye-example-container.html"/>
+			<include file="data/bye-example-entries.html"/>
+			<include file="data/bye-example-outcomes.html"/>
+
+		</section>
+
 		<section id="multiple-tournaboxes" title="Multiple Tournaboxes for a Single Tournament">
 		  <p></p>
-		</section>
 
 		<p> Sometimes, you want to show several tournaboxes for a
 		single tournament. You might be blogging a tournament and
@@ -102,7 +105,7 @@
 		using different tournaboxes to focus on different aspects of
 		play. </p>
 
-		<section id="connecting" title="Connecting Containers to Entries and Outcomes">
+		<subsection id="connecting" title="Connecting Containers to Entries and Outcomes">
 		  <p>
 			In these situations, tournabox's default connection between
 			a container and its entries and outcomes is
@@ -112,7 +115,7 @@
 			and <hcode>tournabox-outcomes</hcode> on your container
 			element. If you do this, tournabox will ignore your
 			container's id. Rather than looking for entries and
-			outcomes based on your container's it, tournabox will look
+			outcomes based on your container's id, tournabox will look
 			for elements whose id's equal the values of
 			<hcode>tournabox-entries</hcode>
 			and <hcode>tournabox-outcomes</hcode>. When it finds these
@@ -122,9 +125,9 @@
 		  </p>
 
 		  <p>See below for an example.</p>
-		</section>
+		</subsection>
 
-		<section id="setting-groups-and-filters" title="Setting Groups and Filters">
+		<subsection id="setting-groups-and-filters" title="Setting Groups and Filters">
 		  <p>Sometimes, you want to show the grouping checkboxes -- the
 		  ways of grouping a tournabox -- in a different order. Other
 		  times, you don't want to show too many ways of grouping a
@@ -144,6 +147,7 @@
 			filter showing Russian and Serbian players.
 		  </p>
 		  <hcode lang="xml" defer_="1"><include raw="true" file="data/russian-serbian-country-seed.html"/></hcode>
+		</subsection>
 
 		  <subsection id="what-you-see-seeded" title="The Resulting Tournabox">
 			<include file="data/russian-serbian-country-seed.html"/>

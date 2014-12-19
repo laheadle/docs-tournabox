@@ -63,7 +63,7 @@
     <div class="container">
 	  <h1>Tournabox: The Manual</h1>
 	  
-		<h3>Contents</h3><ul class="toc"><li class="toc-section"><a href="https://laheadle.github.io/docs-tournabox/manual/#getting-started">Getting Started</a><ul class="toc"><li class="toc-subsection"><a href="https://laheadle.github.io/docs-tournabox/manual/#the-container">Element 1: The Container</a></li><li class="toc-subsection"><a href="https://laheadle.github.io/docs-tournabox/manual/#the-entries">Element 2: The Entries</a></li><li class="toc-subsection"><a href="https://laheadle.github.io/docs-tournabox/manual/#the-outcomes">Element 3: The Outcomes</a></li><li class="toc-subsection"><a href="https://laheadle.github.io/docs-tournabox/manual/#what-you-see">The Resulting Tournabox</a></li></ul></li><li class="toc-section"><a href="https://laheadle.github.io/docs-tournabox/manual/#multiple-tournaboxes">Multiple Tournaboxes for a Single Tournament</a></li><li class="toc-section"><a href="https://laheadle.github.io/docs-tournabox/manual/#connecting">Connecting Containers to Entries and Outcomes</a></li><li class="toc-section"><a href="https://laheadle.github.io/docs-tournabox/manual/#setting-groups-and-filters">Setting Groups and Filters</a><ul class="toc"><li class="toc-subsection"><a href="https://laheadle.github.io/docs-tournabox/manual/#what-you-see-seeded">The Resulting Tournabox</a></li></ul></li><li class="toc-section"><a href="https://laheadle.github.io/docs-tournabox/manual/#custom-styles">Custom Styles</a></li></ul>
+		<h3>Contents</h3><ul class="toc"><li class="toc-section"><a href="https://laheadle.github.io/docs-tournabox/manual/#getting-started">Getting Started</a><ul class="toc"><li class="toc-subsection"><a href="https://laheadle.github.io/docs-tournabox/manual/#the-container">Element 1: The Container</a></li><li class="toc-subsection"><a href="https://laheadle.github.io/docs-tournabox/manual/#the-entries">Element 2: The Entries</a></li><li class="toc-subsection"><a href="https://laheadle.github.io/docs-tournabox/manual/#the-outcomes">Element 3: The Outcomes</a></li><li class="toc-subsection"><a href="https://laheadle.github.io/docs-tournabox/manual/#what-you-see">The Resulting Tournabox</a></li></ul></li><li class="toc-section"><a href="https://laheadle.github.io/docs-tournabox/manual/#byes">Byes (Winning without playing)</a></li><li class="toc-section"><a href="https://laheadle.github.io/docs-tournabox/manual/#multiple-tournaboxes">Multiple Tournaboxes for a Single Tournament</a><ul class="toc"><li class="toc-subsection"><a href="https://laheadle.github.io/docs-tournabox/manual/#connecting">Connecting Containers to Entries and Outcomes</a></li><li class="toc-subsection"><a href="https://laheadle.github.io/docs-tournabox/manual/#setting-groups-and-filters">Setting Groups and Filters</a></li><li class="toc-subsection"><a href="https://laheadle.github.io/docs-tournabox/manual/#what-you-see-seeded">The Resulting Tournabox</a></li></ul></li><li class="toc-section"><a href="https://laheadle.github.io/docs-tournabox/manual/#custom-styles">Custom Styles</a></li></ul>
 
 
 		<div class="section"><div class="section-title" id="getting-started">Getting Started</div>
@@ -111,47 +111,6 @@ GARCIA-LOPEZ, Guillermo ESP [28]
 			  <span class="icode"><span class="hl std">&quot;utopian-open-entries,&quot;</span></span> you tell tournabox which
 			  element contains the entries for the container <span class="icode"><span class="hl std">&quot;utopian-open.&quot;</span></span>
 			  You <b><i>should</i></b> hide this element by using <span class="icode"><span class="hl std">style=&quot;display: none&quot;</span></span> as in the example above.</p>
-
-			<p> As a special case, you may enter the
-			  phrase <span class="icode"><span class="hl std">-bye-</span></span> as an entry. This means that the
-			  player who plays against this entry has a &quot;bye,&quot; and
-			  will automatically win. Two byes next to each other will
-			  extend the bye to the second round, and so on for 4, 8,
-			  16, etc. For example, if a tournabox has the following
-			  entries:
-			  <pre class="code-xml"><span class="hl kwa">&lt;pre</span><span class="hl std"> </span><span class="">style</span><span class="hl std">=</span><span class="hl str">&quot;display: none&quot;</span><span class="hl std"> </span><span class="">id</span><span class="hl std">=</span><span class="hl str">&quot;bye-example-entries&quot;</span><span class="hl kwa">&gt;</span><span class="hl std">
--bye-
--bye-
--bye-
-b
-c
-d
-e
-f
-</span><span class="hl kwa">&lt;/pre</span><span class="hl kwa">&gt;</span><span class="hl std">
-</span></pre>
-			  Then <span class="icode"><span class="hl std">b</span></span> will get a bye in the first and second rounds.
-			</p>
-
-			<p> The resulting tournabox at the beginning of the tournament, before any contests are decided: </p>
-
-			<div class="tournabox-container" id="bye-example" tournabox-groups="By Round">
-</div>
-
-			<pre id="bye-example-entries" style="display: none">
--bye-
--bye-
--bye-
-b
-c
-d
-e
-f
-</pre>
-
-			<pre id="bye-example-outcomes" style="display: none">
-</pre>
-
 
 		  </div>
 
@@ -211,9 +170,53 @@ GARCIA-LOPEZ, Guillermo ESP [28]
 
 		</div>
 
+		<div class="section"><div class="section-title" id="byes">Byes (Winning without playing)</div>
+
+			<p> As a special case, you may enter the
+			  phrase <span class="icode"><span class="hl std">-bye-</span></span> as an entry. This means that the
+			  player who plays against this entry has a &quot;bye,&quot; and
+			  will automatically win. Two byes facing each other will
+			  extend the bye to the second round, and so on for 4, 8,
+			  16, etc. For example, if a tournabox has the following
+			  entries:
+			  <pre class="code-xml"><span class="hl kwa">&lt;pre</span><span class="hl std"> </span><span class="">style</span><span class="hl std">=</span><span class="hl str">&quot;display: none&quot;</span><span class="hl std"> </span><span class="">id</span><span class="hl std">=</span><span class="hl str">&quot;bye-example-entries&quot;</span><span class="hl kwa">&gt;</span><span class="hl std">
+-bye-
+-bye-
+-bye-
+b
+c
+d
+e
+f
+</span><span class="hl kwa">&lt;/pre</span><span class="hl kwa">&gt;</span><span class="hl std">
+</span></pre>
+			  Then <span class="icode"><span class="hl std">b</span></span> will get a bye in the first and second rounds.
+			</p>
+
+			<p> The resulting tournabox at the beginning of the tournament, before any contests are decided: </p>
+
+			<div class="tournabox-container" id="bye-example" tournabox-groups="By Round">
+</div>
+
+			<pre id="bye-example-entries" style="display: none">
+-bye-
+-bye-
+-bye-
+b
+c
+d
+e
+f
+</pre>
+
+			<pre id="bye-example-outcomes" style="display: none">
+</pre>
+
+
+		</div>
+
 		<div class="section"><div class="section-title" id="multiple-tournaboxes">Multiple Tournaboxes for a Single Tournament</div>
 		  <p></p>
-		</div>
 
 		<p> Sometimes, you want to show several tournaboxes for a
 		single tournament. You might be blogging a tournament and
@@ -222,7 +225,7 @@ GARCIA-LOPEZ, Guillermo ESP [28]
 		using different tournaboxes to focus on different aspects of
 		play. </p>
 
-		<div class="section"><div class="section-title" id="connecting">Connecting Containers to Entries and Outcomes</div>
+		<div class="subsection"><div class="subsection-title" id="connecting">Connecting Containers to Entries and Outcomes</div>
 		  <p>
 			In these situations, tournabox's default connection between
 			a container and its entries and outcomes is
@@ -232,7 +235,7 @@ GARCIA-LOPEZ, Guillermo ESP [28]
 			and <pre class="code-txt"><span class="hl std">tournabox-outcomes</span></pre> on your container
 			element. If you do this, tournabox will ignore your
 			container's id. Rather than looking for entries and
-			outcomes based on your container's it, tournabox will look
+			outcomes based on your container's id, tournabox will look
 			for elements whose id's equal the values of
 			<pre class="code-txt"><span class="hl std">tournabox-entries</span></pre>
 			and <pre class="code-txt"><span class="hl std">tournabox-outcomes</span></pre>. When it finds these
@@ -244,7 +247,7 @@ GARCIA-LOPEZ, Guillermo ESP [28]
 		  <p>See below for an example.</p>
 		</div>
 
-		<div class="section"><div class="section-title" id="setting-groups-and-filters">Setting Groups and Filters</div>
+		<div class="subsection"><div class="subsection-title" id="setting-groups-and-filters">Setting Groups and Filters</div>
 		  <p>Sometimes, you want to show the grouping checkboxes -- the
 		  ways of grouping a tournabox -- in a different order. Other
 		  times, you don't want to show too many ways of grouping a
@@ -268,6 +271,7 @@ GARCIA-LOPEZ, Guillermo ESP [28]
 	 </span><span class="">tournabox-outcomes</span><span class="hl std">=</span><span class="hl str">&quot;women-usopen-2014-outcomes&quot;</span><span class="hl std">
 	 </span><span class="">tournabox-groups</span><span class="hl std">=</span><span class="hl str">&quot;By Country,By Seed&quot;</span><span class="hl std"> </span><span class="">tournabox-filters</span><span class="hl std">=</span><span class="hl str">&quot;russia,serbia&quot;</span><span class="hl kwa">&gt;</span><span class="hl kwa">&lt;/div</span><span class="hl kwa">&gt;</span><span class="hl std">
 </span></pre>
+		</div>
 
 		  <div class="subsection"><div class="subsection-title" id="what-you-see-seeded">The Resulting Tournabox</div>
 			<div class="tournabox-container" tournabox-entries="women-usopen-2014-entries" tournabox-filters="russia,serbia" tournabox-groups="By Country,By Seed" tournabox-outcomes="women-usopen-2014-outcomes"></div>
