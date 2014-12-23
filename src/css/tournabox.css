@@ -5,8 +5,12 @@
   font-size: 16px;
   display: inline-block;
   color: black;
-  min-width: 730px;
   font-family: Arial, Sans Serif;
+}
+@media (min-width: 768px) {
+  .tournabox-container .tournabox-root {
+    min-width: 730px;
+  }
 }
 .tournabox-container .tournabox-root .tournabox-menu {
   background-color: #D5EBED;
@@ -32,7 +36,11 @@
   border-spacing: 0px;
   overflow: auto;
   padding: 4px;
-  min-width: 728px;
+}
+@media (min-width: 768px) {
+  .tournabox-container .tournabox-root .tournabox-results {
+    min-width: 728px;
+  }
 }
 .tournabox-container .tournabox-root .tournabox-results .tournabox-header-row .tournabox-header {
   padding: 4px;
@@ -59,6 +67,12 @@
 }
 .tournabox-container .tournabox-root .tournabox-results .tournabox-row .tournabox-defeated {
   color: green;
+}
+.tournabox-container .tournabox-root .tournabox-results .tournabox-row .tournabox-upset {
+  color: #00e600;
+}
+.tournabox-container .tournabox-root .tournabox-results .tournabox-row .tournabox-was-upset-by {
+  color: #ff6666;
 }
 .tournabox-container .tournabox-root .tournabox-results .tournabox-row .tournabox-advanced {
   color: green;
