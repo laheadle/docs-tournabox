@@ -1,6 +1,5 @@
 /* -*- mode: css -*- */
 .tournabox-container .tournabox-root {
-  overflow: auto;
   padding-bottom: 5px;
   border: 1px solid green;
   font-size: 16px;
@@ -8,82 +7,84 @@
   color: black;
   min-width: 730px;
 }
-.tournabox-container .tournabox-root .tournabox-menu-wrapper {
+.tournabox-container .tournabox-root .tournabox-menu {
   background-color: #D5EBED;
-}
-.tournabox-container .tournabox-root .tournabox-menu-wrapper .tournabox-menu {
   position: relative;
   padding: 6px;
 }
-.tournabox-container .tournabox-root .tournabox-menu-wrapper .tournabox-menu .tournabox-filter-span {
+.tournabox-container .tournabox-root .tournabox-menu .tournabox-filter-span {
   position: absolute;
   right: 0;
   top: 6px;
 }
-.tournabox-container .tournabox-root .tournabox-menu-wrapper .tournabox-menu input[type="checkbox"] {
+.tournabox-container .tournabox-root .tournabox-menu input[type="checkbox"] {
   margin: 0 20px 0 4px;
   vertical-align: middle;
 }
-.tournabox-container .tournabox-root .tournabox-menu-wrapper .tournabox-menu .tournabox-filter-input {
+.tournabox-container .tournabox-root .tournabox-menu .tournabox-filter-input {
   box-sizing: border-box;
-  height: 20px;
   border-radius: 5px;
   padding: 0;
 }
-.tournabox-container .tournabox-root table {
+.tournabox-container .tournabox-root .tournabox-results {
   border-collapse: separate;
+  overflow: auto;
+  padding: 4px;
 }
-.tournabox-container .tournabox-root .tournabox-group {
-  margin-top: 10px;
-  padding: 0 4px 0 4px;
-}
-.tournabox-container .tournabox-root .tournabox-group .tournabox-header-row .tournabox-header {
+.tournabox-container .tournabox-root .tournabox-results .tournabox-header-row .tournabox-header {
+  padding: 4px;
   font-weight: bold;
   font-style: italic;
   font-size: 1.2em;
 }
-.tournabox-container .tournabox-root .tournabox-group .tournabox-row {
+.tournabox-container .tournabox-root .tournabox-results .tournabox-odd {
+  background-color: #ebebeb;
+}
+.tournabox-container .tournabox-root .tournabox-results .tournabox-row {
   vertical-align: baseline;
   line-height: 1;
 }
-.tournabox-container .tournabox-root .tournabox-group .tournabox-row td {
-  min-width: 140px;
+.tournabox-container .tournabox-root .tournabox-results .tournabox-row td:first-child {
+  padding-left: 7px;
 }
-.tournabox-container .tournabox-root .tournabox-group .tournabox-row .tournabox-entry {
+.tournabox-container .tournabox-root .tournabox-results .tournabox-row .tournabox-entry {
   font-style: italic;
   padding: 0 4px 0 0;
 }
-.tournabox-container .tournabox-root .tournabox-group .tournabox-row .tournabox-was-defeated-by {
+.tournabox-container .tournabox-root .tournabox-results .tournabox-row .tournabox-was-defeated-by {
   color: red;
 }
-.tournabox-container .tournabox-root .tournabox-group .tournabox-row .tournabox-defeated {
+.tournabox-container .tournabox-root .tournabox-results .tournabox-row .tournabox-defeated {
   color: green;
 }
-.tournabox-container .tournabox-root .tournabox-group .tournabox-row .tournabox-advanced {
+.tournabox-container .tournabox-root .tournabox-results .tournabox-row .tournabox-advanced {
   color: green;
   text-decoration: underline;
 }
-.tournabox-container .tournabox-root .tournabox-group .tournabox-row .tournabox-will-face {
+.tournabox-container .tournabox-root .tournabox-results .tournabox-row .tournabox-will-face {
   color: blue;
 }
-.tournabox-container .tournabox-root .tournabox-group .tournabox-row .tournabox-in-round .tournabox-round {
+.tournabox-container .tournabox-root .tournabox-results .tournabox-row .tournabox-in-round .tournabox-round {
   margin-left: 5px;
   text-decoration: underline;
   font-weight: bold;
 }
-.tournabox-container .tournabox-root .tournabox-group .tournabox-row .tournabox-country {
+.tournabox-container .tournabox-root .tournabox-results .tournabox-row .tournabox-country {
   margin-left: 4px;
   color: purple;
   font-size: .8em;
 }
-.tournabox-container .tournabox-root .tournabox-group .tournabox-row .tournabox-seeded .tournabox-seed {
-  color: blue;
+.tournabox-container .tournabox-root .tournabox-results .tournabox-row .tournabox-seeded .tournabox-name {
+  color: #000099;
+}
+.tournabox-container .tournabox-root .tournabox-results .tournabox-row .tournabox-seeded .tournabox-seed {
+  font-weight: bold;
   vertical-align: super;
   font-size: .8em;
 }
-.tournabox-container .tournabox-root .tournabox-group .tournabox-row .tournabox-seeded .tournabox-seed:before {
+.tournabox-container .tournabox-root .tournabox-results .tournabox-row .tournabox-seeded .tournabox-seed:before {
   content: ' [';
 }
-.tournabox-container .tournabox-root .tournabox-group .tournabox-row .tournabox-seeded .tournabox-seed:after {
+.tournabox-container .tournabox-root .tournabox-results .tournabox-row .tournabox-seeded .tournabox-seed:after {
   content: ']';
 }
