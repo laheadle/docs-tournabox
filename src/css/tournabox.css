@@ -69,10 +69,12 @@
   color: green;
 }
 .tournabox-container .tournabox-root .tournabox-results .tournabox-row .tournabox-upset {
-  color: #00e600;
+  color: green;
+  font-weight: bold;
 }
 .tournabox-container .tournabox-root .tournabox-results .tournabox-row .tournabox-was-upset-by {
-  color: #ff6666;
+  color: red;
+  font-weight: bold;
 }
 .tournabox-container .tournabox-root .tournabox-results .tournabox-row .tournabox-advanced {
   color: green;
