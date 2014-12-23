@@ -28,9 +28,11 @@
   padding: 0;
 }
 .tournabox-container .tournabox-root .tournabox-results {
-  border-collapse: separate;
+  border-collapse: collaps;
+  border-spacing: 0px;
   overflow: auto;
   padding: 4px;
+  min-width: 728px;
 }
 .tournabox-container .tournabox-root .tournabox-results .tournabox-header-row .tournabox-header {
   padding: 4px;
@@ -44,7 +46,7 @@
   line-height: 1;
 }
 .tournabox-container .tournabox-root .tournabox-results .tournabox-row td {
-  padding: 0 4px 2px 4px;
+  padding: 2px 4px 2px 4px;
 }
 .tournabox-container .tournabox-root .tournabox-results .tournabox-row td:first-child {
   padding-left: 7px;
