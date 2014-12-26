@@ -9,7 +9,7 @@
 }
 @media (min-width: 768px) {
   .tournabox-container .tournabox-root {
-    min-width: 730px;
+    min-width: 750px;
   }
 }
 .tournabox-container .tournabox-root .tournabox-menu {
@@ -39,8 +39,14 @@
 }
 @media (min-width: 768px) {
   .tournabox-container .tournabox-root .tournabox-results {
-    min-width: 728px;
+    min-width: 748px;
   }
+}
+.tournabox-container .tournabox-root .tournabox-results .tournabox-name {
+  cursor: pointer;
+}
+.tournabox-container .tournabox-root .tournabox-results .tournabox-name:hover {
+  background-color: #ffe0e0;
 }
 .tournabox-container .tournabox-root .tournabox-results .tournabox-header-row .tournabox-header {
   padding: 8px;
