@@ -1,6 +1,5 @@
 /* -*- mode: css -*- */
 .tournabox-container .tournabox-root {
-  padding-bottom: 5px;
   border: 1px solid green;
   font-size: 16px;
   display: inline-block;
@@ -12,8 +11,21 @@
     min-width: 750px;
   }
 }
+.tournabox-container .tournabox-root .tournabox-brand {
+  text-align: right;
+  padding: 6px;
+  background-color: #d5ebed;
+}
+.tournabox-container .tournabox-root .tournabox-brand a {
+  color: blue;
+  padding-right: 10px;
+  text-decoration: none;
+}
+.tournabox-container .tournabox-root .tournabox-brand a:hover {
+  text-decoration: underline;
+}
 .tournabox-container .tournabox-root .tournabox-menu {
-  background-color: #D5EBED;
+  background-color: #d5ebed;
   position: relative;
   padding: 6px;
 }
