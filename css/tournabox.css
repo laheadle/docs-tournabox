@@ -20,6 +20,7 @@
   color: blue;
   padding-right: 10px;
   text-decoration: none;
+  font-style: italic;
 }
 .tournabox-container .tournabox-root .tournabox-brand a:hover {
   text-decoration: underline;
