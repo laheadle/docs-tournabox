@@ -1,2 +1,4 @@
 *~
 src/.stog/cache/*
+src/.stog/templates/data/stability.txt
+src/.stog/templates/data/version.txt

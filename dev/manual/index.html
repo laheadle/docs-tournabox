@@ -12,12 +12,12 @@
     <title>tournabox manual</title>
 
     
-    <link href="/docs-tournabox/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="https://laheadle.github.io/docs-tournabox/dev/css/bootstrap.min.css" rel="stylesheet"/>
 
     
-    <link href="/docs-tournabox/css/style.css" rel="stylesheet"/>
+    <link href="https://laheadle.github.io/docs-tournabox/dev/css/style.css" rel="stylesheet"/>
 
-    <link href="/docs-tournabox/css/tournabox.css" rel="stylesheet"/>
+    <link href="https://laheadle.github.io/docs-tournabox/dev/css/tournabox.css" rel="stylesheet"/>
 
     
     
@@ -38,13 +38,13 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/docs-tournabox/">Tournabox</a>
+                <a class="navbar-brand" href="https://laheadle.github.io/docs-tournabox/dev">Tournabox</a>
             </div>
             
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="/docs-tournabox/manual">Docs</a>
+                        <a href="https://laheadle.github.io/docs-tournabox/dev/manual">Docs</a>
                     </li>
                     <li>
                         <a href="https://github.com/laheadle/tournabox">Code</a>
@@ -63,13 +63,34 @@
     <div class="container">
 	  <h1>Tournabox: The Manual</h1>
 	  
-		<h3>Contents</h3><ul class="toc"><li class="toc-section"><a href="https://laheadle.github.io/docs-tournabox/manual/#getting-started">Getting Started</a><ul class="toc"><li class="toc-subsection"><a href="https://laheadle.github.io/docs-tournabox/manual/#the-container">Element 1: The Container</a></li><li class="toc-subsection"><a href="https://laheadle.github.io/docs-tournabox/manual/#the-entries">Element 2: The Entries</a></li><li class="toc-subsection"><a href="https://laheadle.github.io/docs-tournabox/manual/#the-outcomes">Element 3: The Outcomes</a></li><li class="toc-subsection"><a href="https://laheadle.github.io/docs-tournabox/manual/#what-you-see">The Resulting Tournabox</a></li></ul></li><li class="toc-section"><a href="https://laheadle.github.io/docs-tournabox/manual/#byes">Byes (Winning without playing)</a></li><li class="toc-section"><a href="https://laheadle.github.io/docs-tournabox/manual/#multiple-tournaboxes">Multiple Tournaboxes for a Single Tournament</a><ul class="toc"><li class="toc-subsection"><a href="https://laheadle.github.io/docs-tournabox/manual/#connecting">Connecting Containers to Entries and Outcomes</a></li><li class="toc-subsection"><a href="https://laheadle.github.io/docs-tournabox/manual/#setting-groups-and-filters">Setting Groups and Filters</a></li><li class="toc-subsection"><a href="https://laheadle.github.io/docs-tournabox/manual/#what-you-see-seeded">The Resulting Tournabox</a></li></ul></li><li class="toc-section"><a href="https://laheadle.github.io/docs-tournabox/manual/#custom-styles">Custom Styles</a></li></ul>
-
+		<h3>Contents</h3><ul class="toc"><li class="toc-section"><a href="https://laheadle.github.io/docs-tournabox/manual/#getting-started">Getting Started</a><ul class="toc"><li class="toc-subsection"><a href="https://laheadle.github.io/docs-tournabox/manual/#downloading">Downloading tournabox</a></li><li class="toc-subsection"><a href="https://laheadle.github.io/docs-tournabox/manual/#js-and-css">Including the tournabox javascript and css files</a></li><li class="toc-subsection"><a href="https://laheadle.github.io/docs-tournabox/manual/#the-container">Element 1: The Container</a></li><li class="toc-subsection"><a href="https://laheadle.github.io/docs-tournabox/manual/#the-entries">Element 2: The Entries</a></li><li class="toc-subsection"><a href="https://laheadle.github.io/docs-tournabox/manual/#the-outcomes">Element 3: The Outcomes</a></li><li class="toc-subsection"><a href="https://laheadle.github.io/docs-tournabox/manual/#what-you-see">The Resulting Tournabox</a></li></ul></li><li class="toc-section"><a href="https://laheadle.github.io/docs-tournabox/manual/#byes">Byes (Winning without playing)</a></li><li class="toc-section"><a href="https://laheadle.github.io/docs-tournabox/manual/#multiple-tournaboxes">Multiple Tournaboxes for a Single Tournament</a><ul class="toc"><li class="toc-subsection"><a href="https://laheadle.github.io/docs-tournabox/manual/#connecting">Connecting Containers to Entries and Outcomes</a></li><li class="toc-subsection"><a href="https://laheadle.github.io/docs-tournabox/manual/#setting-groups-and-filters">Setting Groups and Filters</a></li><li class="toc-subsection"><a href="https://laheadle.github.io/docs-tournabox/manual/#what-you-see-seeded">The Resulting Tournabox</a></li></ul></li><li class="toc-section"><a href="https://laheadle.github.io/docs-tournabox/manual/#custom-styles">Custom Styles</a></li></ul>
 
 		<div class="section"><div class="section-title" id="getting-started">Getting Started</div>
 
-		  Imagine a small tournament called the &quot;utopian open.&quot; You need three HTML elements to display it as a tournabox.
+		  <p>Imagine you want to display a small tournament called the
+		  &quot;utopian open&quot; on your web site.  You need to download
+		  tournabox, create an HTML page, include the tournabox
+		  javascript and css in your page, and then create three HTML
+		  elements. </p>
 
+		  <div class="subsection"><div class="subsection-title" id="downloading">Downloading tournabox</div>
+			Click to download tournabox 1.0.0:
+			<ul>
+			  <li> The javascript: <current-release-js></current-release-js> </li>
+			  <li> The css: <current-release-css></current-release-css> </li>
+			</ul>
+		  </div>
+
+
+		  <div class="subsection"><div class="subsection-title" id="js-and-css">Including the tournabox javascript and css files</div>
+			<p></p>
+
+			<pre class="code-xml"></pre>
+			<p> The container <b><i>must</i></b> have class
+			  <span class="icode"><span class="hl std">tournabox-container.</span></span></p> The id is used to find the entry and outcome elements (see below).
+		  </div>
+
+		  
 		  <div class="subsection"><div class="subsection-title" id="the-container">Element 1: The Container</div>
 			<p>This is the element your readers will see, containing the tournament results. It looks like this:</p>
 
@@ -809,13 +830,13 @@ CILIC, Mari
 	  
 	</div>
 
-    <script src="/docs-tournabox/js/tournabox.js"></script>
+    <script src="https://laheadle.github.io/docs-tournabox/dev/js/tournabox.js"></script>
   
     
-    <script src="/docs-tournabox/js/jquery.js"></script>
+    <script src="https://laheadle.github.io/docs-tournabox/dev/js/jquery.js"></script>
 
     
-    <script src="/docs-tournabox/js/bootstrap.min.js"></script>
+    <script src="https://laheadle.github.io/docs-tournabox/dev/js/bootstrap.min.js"></script>
 
 </body>
 

@@ -1,0 +1,4 @@
+FILE=src/.stog/templates/data/latest-release.txt 
+echo -n $1 >$FILE
+cat $FILE
+echo

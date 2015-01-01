@@ -7,11 +7,32 @@
 	  <prepare-toc depth="2">
 		<toc><h3>Contents</h3></toc>
 
-
 		<section id="getting-started" title="Getting Started">
 
-		  Imagine a small tournament called the "utopian open." You need three HTML elements to display it as a tournabox.
+		  <p>Imagine you want to display a small tournament called the
+		  "utopian open" on your web site.  You need to download
+		  tournabox, create an HTML page, include the tournabox
+		  javascript and css in your page, and then create three HTML
+		  elements. </p>
 
+		  <subsection id="downloading" title="Downloading tournabox">
+			Click to download tournabox <version/>:
+			<ul>
+			  <li> The javascript: <current-release-js/> </li>
+			  <li> The css: <current-release-css/> </li>
+			</ul>
+		  </subsection>
+
+
+		  <subsection id="js-and-css" title="Including the tournabox javascript and css files">
+			<p></p>
+
+			<hcode lang="xml" defer_="1"></hcode>
+			<p> The container <emph>must</emph> have class
+			  <ic>tournabox-container.</ic></p> The id is used to find the entry and outcome elements (see below).
+		  </subsection>
+
+		  
 		  <subsection id="the-container" title="Element 1: The Container">
 			<p>This is the element your readers will see, containing the tournament results. It looks like this:</p>
 
@@ -166,6 +187,6 @@
 	  </prepare-toc>
 	</div>
 
-    <script src="/docs-tournabox/js/tournabox.js"></script>
+    <script src="&lt;root-dir/&gt;/js/tournabox.js"></script>
   </contents>
 </page>

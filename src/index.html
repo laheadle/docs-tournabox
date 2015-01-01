@@ -9,6 +9,14 @@
 <stog:emph _dummy=""><b><i><contents/></i></b></stog:emph>
 <stog:ic _dummy=""><icode defer_="1" lang="xml"><contents/></icode></stog:ic>
 
+<stog:version><include file="data/version.txt"/></stog:version>
+<stog:stability><include file="data/stability.txt"/></stog:stability>
+
+<stog:root-dir><site-url/>/<stability/></stog:root-dir>
+
+<stog:tournabox-js><root-dir/>/js/tournabox.js</stog:tournabox-js>
+<stog:tournabox-css><root-dir/>/css/tournabox.css</stog:tournabox-css>
+
 <contents>
     <!-- Full Width Image Header -->
     <header class="header-image">
@@ -81,6 +89,6 @@
 	<include file="data/men-usopen-2014-entries.html"/>
 	<include file="data/men-usopen-2014-outcomes.html"/>
 
-    <script src="js/tournabox.js"></script>
+    <script src="&lt;tournabox-js/&gt;"></script>
 </contents>
 </page>
