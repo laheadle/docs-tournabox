@@ -1,3 +1,5 @@
+# First, install tournabox using opam
+
 # The publishing process here is as follows. We have two "global"
 # (world-visible) versions of the web site: The "stable" and
 # "unstable" versions.
