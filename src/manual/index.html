@@ -1,4 +1,4 @@
-<page title="tournabox manual"
+<page title="Tournabox manual"
 	  with-contents="true">
   <!-- Page Content -->
   <contents>
@@ -8,27 +8,29 @@
 	  <prepare-toc depth="2">
 		<toc><h3>Contents</h3></toc>
 
-		<section id="getting-started" title="Getting Started">
+		<section id="getting-started-publishing" title="Getting Started: How to Publish a tournabox">
 
 		  <p>Imagine you want to display a small tournament called the
 		  "utopian open" on your web site.  You need to download
-		  tournabox, create an HTML page, include the tournabox
+		  Tournabox, create an HTML page, include the Tournabox
 		  javascript and css in your page, and then create three HTML
 		  elements. </p>
 
-		  <subsection id="downloading" title="Downloading tournabox">
-			Click to download tournabox version: <emph><version/></emph>:
+		  <subsection id="downloading" title="Step 1: Download Tournabox">
+			Click to download Tournabox version: <emph><version/></emph>:
 			<ul>
-			  <li> The javascript <a href="&lt;tournabox-js/&gt;">tournabox.js</a> </li>
+			  <li> The javascript: <a href="&lt;tournabox-js/&gt;">tournabox.js</a> </li>
 			  <li> The css: <a href="&lt;tournabox-css/&gt;">tournabox.css</a> </li>
 			</ul>
+			<p> Save these files in your web site, and remember where they are. </p>
 		  </subsection>
 
 
-		  <subsection id="js-and-css" title="Including the tournabox javascript and css files">
-			<p>
+		  <subsection id="js-and-css" title="Step 2: Include the Tournabox javascript and css files">
+			<p> Create an html page and insert these lines in the <icode><![CDATA[<head>]]></icode> element
+			  (first change them to point to your newly installed files).
 			  <hcode lang="xml"><![CDATA[<script src="http://<your-server>/your-js-path/tournabox.js"></script>
-<script src="http://<your-server>/your-css-path/tournabox.css"></script>]]></hcode>
+<link href="http://<your-server>/your-css-path/tournabox.css" rel="stylesheet"></link>]]></hcode>
 			</p>
 		  </subsection>
 
@@ -53,21 +55,27 @@
 			<p> An entry looks like this: </p>
 			
 			<P><ic>NAME OPTIONAL-COUNTRY [OPTIONAL-SEED] (OPTIONAL ATTRIBUTE)</ic></P>
-			<p> Where the optional country is a three letter country code,
-			  the optional seed is a number, and the optional attribute is a
-			  letter, such as 'w' for "withdrew" or 'q' for "qualifier." </p>
+			<p> Where the optional country is a three letter country
+			  code (taken
+			  from <a href="https://github.com/laheadle/tournabox/blob/master/countries.ml">
+			  this list</a>), the optional seed is a number, and the
+			  optional attribute is a letter, such as 'w' for
+			  "withdrew" or 'q' for "qualifier." </p>
 			
 			<p> The entries are found by starting from the id of the container,
 			  here <ic>"utopian-open,"</ic> and adding the string <ic>"-entries."</ic> Thus, by giving the entries element the id
-			  <ic>"utopian-open-entries,"</ic> you tell tournabox which
-			  element contains the entries for the container <ic>"utopian-open."</ic>
-			  You <emph>should</emph> hide this element by using <ic>style="display: none"</ic> as in the example above.</p>
+			  <ic>"utopian-open-entries,"</ic> you tell Tournabox which
+			  element contains the entries for the container <ic>"utopian-open."</ic></p>
 
 		  </subsection>
 
 		  <subsection id="the-outcomes" title="Element 3: The Outcomes">
-			<p>This element contains the record of wins and losses. Each
-			  line lists the name of a winner.</p>
+
+			<p>This element contains the record of wins and
+			  losses. Each line lists the name of a winner, and
+			  Tournabox figures out whom that winner was playing based
+			  on the order you provided in the entries element.</p>
+
 			<p> The name can be abbreviated
 			  to save typing, as long as there is only one name matching the
 			  abbreviation. Abbreviations can come from anywhere in the
@@ -75,19 +83,19 @@
 			  "Joe Smith" you could enter "joe" or "mith".</p>
 
 			<p> Note that Sam Querrey (abbreviated 'qu') is listed
-			twice. This means that he won in the first round, <emph>
+			twice below. This means that he won in the first round, <emph>
 			and then won again </emph> in the second round.</p>
 
 			<hcode lang="xml" defer_="1"><include raw="true" file="data/utopian-open-outcomes.html"/></hcode>
 			<p> Much like entries, outcomes are found by starting from the id of the container,
 			  here <ic>"utopian-open,"</ic> and adding the string <ic>"-outcomes".</ic> Thus, by
 			  giving the outcomes element the id <ic>"utopian-open-outcomes,"</ic> you tell
-			  tournabox which element contains the outcomes for the container
+			  Tournabox which element contains the outcomes for the container
 			  "utopian-open." </p>
 
 		  </subsection>
 
-		  <subsection id="what-you-see" title="The Resulting Tournabox">
+		  <subsection id="what-you-see" title="The Resulting tournabox">
 			<include file="data/utopian-open-container.html"/>
 			<include file="data/utopian-open-entries.html"/>
 			<include file="data/utopian-open-outcomes.html"/>
@@ -128,20 +136,19 @@
 
 		<subsection id="connecting" title="Connecting Containers to Entries and Outcomes">
 		  <p>
-			In these situations, tournabox's default connection between
+			In these situations, Tournabox's default connection between
 			a container and its entries and outcomes is
 			insufficient. You need a way of saying, "I want this
 			container to use these entries and these outcomes." You can do this by setting the attributes
-			<hcode>tournabox-entries</hcode>
-			and <hcode>tournabox-outcomes</hcode> on your container
-			element. If you do this, tournabox will ignore your
-			container's id. Rather than looking for entries and
-			outcomes based on your container's id, tournabox will look
-			for elements whose id's equal the values of
-			<hcode>tournabox-entries</hcode>
-			and <hcode>tournabox-outcomes</hcode>. When it finds these
-			elements, tournabox will connect them to your
-			container. If no elements with these id's exist, tournabox
+			<icode>tournabox-entries</icode>
+			and <icode>tournabox-outcomes</icode> on your container
+			element. If you do this, Tournabox will ignore your
+			container's id, and look for elements whose id's equal the
+			values of
+			<icode>tournabox-entries</icode>
+			and <icode>tournabox-outcomes</icode>. When it finds these
+			elements, Tournabox will connect them to your
+			container. If no elements with these id's exist, Tournabox
 			will complain.
 		  </p>
 
@@ -151,11 +158,11 @@
 		<subsection id="setting-groups-and-filters" title="Setting Groups and Filters">
 		  <p>Sometimes, you want to show the grouping checkboxes -- the
 		  ways of grouping a tournabox -- in a different order. Other
-		  times, you don't want to show too many ways of grouping a
-		  tournabox. You can do either by adding the
+		  times, you don't want to show very many ways of grouping a
+		  tournabox. You can do these things by adding the
 		  attribute <ic>tournabox-groups</ic> to your container
-		  element.</p> This attribute's content is the name and order
-		  of the grouping checkboxes you want to show.
+		  element. This attribute's content is the name and order
+		  of the grouping checkboxes you want to show. </p>
 
 		  <p> You can also set the initial filter string using the
 		  attribute <ic>tournabox-filters</ic>.To give more than one
@@ -170,7 +177,7 @@
 		  <hcode lang="xml" defer_="1"><include raw="true" file="data/russian-serbian-country-seed.html"/></hcode>
 		</subsection>
 
-		  <subsection id="what-you-see-seeded" title="The Resulting Tournabox">
+		  <subsection id="what-you-see-seeded" title="The Resulting tournabox">
 			<include file="data/russian-serbian-country-seed.html"/>
 		  </subsection>
 		  

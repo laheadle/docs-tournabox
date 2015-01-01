@@ -2817,7 +2817,7 @@ l=bm(nH,d,ar),a0=a[4],a1=a[5],k=b_(D),C=bu(D,kj);C.className="tournabox-results"
 w=b_(D),F=b_(D),G=fc(0,0,D),x=c7(D),aF=function(a){var
 b=c7(D),c=fc([0,"checkbox"],0,D);L(b,bz(h(Z(a,dF,205),a)));L(b,c);b.className="tournabox-menu-checkspan";L(w,b);return[0,c,a]};L(x,bz(n6));k.className="tournabox-root";L(a1,k);F.className="tournabox-menu-wrapper";w.className="tournabox-menu";x.className="tournabox-filter-span";G.className="tournabox-filter-input";L(x,G);L(w,x);L(k,F);L(F,w);L(k,C);var
 H=b_(D);H.className="tournabox-brand";var
-B=bu(D,ki);B.setAttribute("href","http://laheadle.github.io/docs-tournabox");L(B,bz(n5));L(H,B);L(k,H);var
+B=bu(D,ki);B.setAttribute("href","http://laheadle.github.io/docs-tournabox/stable");L(B,bz(n5));L(H,B);L(k,H);var
 ag=[0,m3,[0,mI,[0,mj,[0,nm,0]]]],ah=function(b){return cI(function(a){var
 c=aO(h(Z(a,dF,201),a));return aM(aO(b),c)},ag)},aj=h(aN(function(a){return 1-ah(a)}),N);if(0<J(aj)){var
 aA=bn(n3,aj);dj(h(K(n4),aA))}var
