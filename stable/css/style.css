@@ -64,7 +64,7 @@ color: #1c45d6;
 .marketing .tournabox-container {
 	float: right;
 	display: inline-block;
-	height: 700px;
+	max-height: 700px;
 	overflow: scroll;
 }
 
@@ -188,7 +188,7 @@ footer {
     }
 
     .headline h1 {
-        font-size: 60px;
+        font-size: 50px;
     }
 
     .headline h2 {

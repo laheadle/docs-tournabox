@@ -6,18 +6,13 @@
   color: black;
   font-family: Arial, Sans Serif;
 }
-@media (min-width: 768px) {
-  .tournabox-container .tournabox-root {
-    min-width: 750px;
-  }
-}
 .tournabox-container .tournabox-root .tournabox-brand {
   text-align: right;
   padding: 6px;
   background-color: #d5ebed;
 }
 .tournabox-container .tournabox-root .tournabox-brand a {
-  color: blue;
+  color: #0000ff;
   padding-right: 10px;
   text-decoration: none;
   font-style: italic;
@@ -27,13 +22,10 @@
 }
 .tournabox-container .tournabox-root .tournabox-menu {
   background-color: #d5ebed;
-  position: relative;
-  padding: 6px;
 }
-.tournabox-container .tournabox-root .tournabox-menu .tournabox-filter-span {
-  position: absolute;
-  right: 0;
-  top: 6px;
+.tournabox-container .tournabox-root .tournabox-menu span {
+  display: inline-block;
+  padding: 6px;
 }
 .tournabox-container .tournabox-root .tournabox-menu input[type="checkbox"] {
   margin: 0 20px 0 4px;
@@ -45,14 +37,14 @@
   padding: 0;
 }
 .tournabox-container .tournabox-root .tournabox-results {
-  border-collapse: collaps;
   border-spacing: 0px;
   overflow: auto;
   padding: 4px;
 }
-@media (min-width: 768px) {
+@media (max-width: 400px) {
   .tournabox-container .tournabox-root .tournabox-results {
-    min-width: 748px;
+    table-layout: fixed;
+    width: 100%;
   }
 }
 .tournabox-container .tournabox-root .tournabox-results .tournabox-name {
@@ -97,6 +89,8 @@
 }
 .tournabox-container .tournabox-root .tournabox-results .tournabox-row td {
   padding: 2px 4px 2px 4px;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .tournabox-container .tournabox-root .tournabox-results .tournabox-row td:first-child {
   padding-left: 7px;
@@ -105,7 +99,7 @@
   font-style: italic;
 }
 .tournabox-container .tournabox-root .tournabox-results .tournabox-row .tournabox-was-defeated-by {
-  color: red;
+  color: #ff0000;
 }
 .tournabox-container .tournabox-root .tournabox-results .tournabox-row .tournabox-defeated {
   color: green;
@@ -115,15 +109,20 @@
   font-weight: bold;
 }
 .tournabox-container .tournabox-root .tournabox-results .tournabox-row .tournabox-was-upset-by {
-  color: red;
+  color: #ff0000;
   font-weight: bold;
 }
 .tournabox-container .tournabox-root .tournabox-results .tournabox-row .tournabox-advanced {
-  color: green;
-  text-decoration: underline;
+  color: black;
+}
+.tournabox-container .tournabox-root .tournabox-results .tournabox-row .tournabox-to-be-decided {
+  color: black;
+}
+.tournabox-container .tournabox-root .tournabox-results .tournabox-row .tournabox-with-a-bye {
+  color: black;
 }
 .tournabox-container .tournabox-root .tournabox-results .tournabox-row .tournabox-will-face {
-  color: blue;
+  color: #0000ff;
 }
 .tournabox-container .tournabox-root .tournabox-results .tournabox-row .tournabox-in-round .tournabox-round {
   margin-left: 5px;
