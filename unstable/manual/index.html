@@ -64,7 +64,7 @@
     <div class="container">
 	  <h1>Tournabox: The Manual</h1>
 	  
-		<h3>Contents</h3><ul class="toc"><li class="toc-section"><a href="https://laheadle.github.io/docs-tournabox/unstable/manual/#getting-started-publishing">Getting Started: How to Publish a tournabox</a><ul class="toc"><li class="toc-subsection"><a href="https://laheadle.github.io/docs-tournabox/unstable/manual/#downloading">Step 1: Download Tournabox</a></li><li class="toc-subsection"><a href="https://laheadle.github.io/docs-tournabox/unstable/manual/#js-and-css">Step 2: Include the Tournabox javascript and css files</a></li><li class="toc-subsection"><a href="https://laheadle.github.io/docs-tournabox/unstable/manual/#the-container">Element 1: The Container</a></li><li class="toc-subsection"><a href="https://laheadle.github.io/docs-tournabox/unstable/manual/#the-entries">Element 2: The Entries</a></li><li class="toc-subsection"><a href="https://laheadle.github.io/docs-tournabox/unstable/manual/#the-outcomes">Element 3: The Outcomes</a></li><li class="toc-subsection"><a href="https://laheadle.github.io/docs-tournabox/unstable/manual/#what-you-see">The Resulting tournabox</a></li></ul></li><li class="toc-section"><a href="https://laheadle.github.io/docs-tournabox/unstable/manual/#byes">Byes (Winning without playing)</a></li><li class="toc-section"><a href="https://laheadle.github.io/docs-tournabox/unstable/manual/#multiple-tournaboxes">Multiple Tournaboxes for a Single Tournament</a><ul class="toc"><li class="toc-subsection"><a href="https://laheadle.github.io/docs-tournabox/unstable/manual/#connecting">Connecting Containers to Entries and Outcomes</a></li><li class="toc-subsection"><a href="https://laheadle.github.io/docs-tournabox/unstable/manual/#setting-groups-and-filters">Setting Groups and Filters</a></li><li class="toc-subsection"><a href="https://laheadle.github.io/docs-tournabox/unstable/manual/#what-you-see-seeded">The Resulting tournabox</a></li></ul></li><li class="toc-section"><a href="https://laheadle.github.io/docs-tournabox/unstable/manual/#custom-styles">Custom Styles</a></li></ul>
+		<h3>Contents</h3><ul class="toc"><li class="toc-section"><a href="https://laheadle.github.io/docs-tournabox/unstable/manual/#getting-started-publishing">Getting Started: How to Publish a tournabox</a><ul class="toc"><li class="toc-subsection"><a href="https://laheadle.github.io/docs-tournabox/unstable/manual/#downloading">Step 1: Download Tournabox</a></li><li class="toc-subsection"><a href="https://laheadle.github.io/docs-tournabox/unstable/manual/#js-and-css">Step 2: Include the Tournabox javascript and css files</a></li><li class="toc-subsection"><a href="https://laheadle.github.io/docs-tournabox/unstable/manual/#the-container">Element 1: The Container</a></li><li class="toc-subsection"><a href="https://laheadle.github.io/docs-tournabox/unstable/manual/#the-entries">Element 2: The Entries</a></li><li class="toc-subsection"><a href="https://laheadle.github.io/docs-tournabox/unstable/manual/#the-outcomes">Element 3: The Outcomes</a></li><li class="toc-subsection"><a href="https://laheadle.github.io/docs-tournabox/unstable/manual/#what-you-see">The Resulting tournabox</a></li></ul></li><li class="toc-section"><a href="https://laheadle.github.io/docs-tournabox/unstable/manual/#byes">Byes (Winning without playing)</a></li><li class="toc-section"><a href="https://laheadle.github.io/docs-tournabox/unstable/manual/#multiple-tournaboxes">Multiple Tournaboxes for a Single Tournament</a><ul class="toc"><li class="toc-subsection"><a href="https://laheadle.github.io/docs-tournabox/unstable/manual/#connecting">Connecting Containers to Entries and Outcomes</a></li><li class="toc-subsection"><a href="https://laheadle.github.io/docs-tournabox/unstable/manual/#setting-groups-and-filters">Setting Groups and Filters</a></li><li class="toc-subsection"><a href="https://laheadle.github.io/docs-tournabox/unstable/manual/#what-you-see-seeded">The Resulting tournabox</a></li><li class="toc-subsection"><a href="https://laheadle.github.io/docs-tournabox/unstable/manual/#quoting-the-filter-text">Quoting the Filter Text</a></li><li class="toc-subsection"><a href="https://laheadle.github.io/docs-tournabox/unstable/manual/#hiding-the-menu-bar">Hiding the Menu Bar</a></li></ul></li><li class="toc-section"><a href="https://laheadle.github.io/docs-tournabox/unstable/manual/#custom-styles">Custom Styles</a></li></ul>
 
 		<div class="section"><div class="section-title" id="getting-started-publishing">Getting Started: How to Publish a tournabox</div>
 
@@ -132,6 +132,9 @@ GARCIA-LOPEZ, Guillermo ESP [28]
 			  optional attribute is a letter, such as 'w' for
 			  &quot;withdrew&quot; or 'q' for &quot;qualifier.&quot; </p>
 			
+			<p> Note that if you are not using countries, you must
+			not <a href="#setting-groups-and-filters"> show the country group. </a> </p>
+
 			<p> The entries are found by starting from the id of the container,
 			  here <span class="icode"><span class="hl std">&quot;utopian-open,&quot;</span></span> and adding the string <span class="icode"><span class="hl std">&quot;-entries.&quot;</span></span> Thus, by giving the entries element the id
 			  <span class="icode"><span class="hl std">&quot;utopian-open-entries,&quot;</span></span> you tell Tournabox which
@@ -152,6 +155,12 @@ GARCIA-LOPEZ, Guillermo ESP [28]
 			  name, and case does not matter. For example, to abbreviate
 			  &quot;Joe Smith&quot; you could enter &quot;joe&quot; or &quot;mith&quot;.</p>
 
+			<p> If one entry's full name is entirely contained in
+			another entry's full name, and you want to select the
+			shorter one, then enter its full name. For example, to
+			select &quot;Joe Smith&quot; over &quot;Joe Smithson&quot;, enter &quot;Joe
+			Smith&quot;. </p>
+
 			<p> Note that Sam Querrey (abbreviated 'qu') is listed
 			twice below. This means that he won in the first round, <b><i>
 			and then won again </i></b> in the second round.</p>
@@ -171,6 +180,7 @@ GARCIA-LOPEZ, Guillermo ESP [28]
 			  &quot;utopian-open.&quot; </p>
 
 		  </div>
+
 
 		  <div class="subsection"><div class="subsection-title" id="what-you-see">The Resulting tournabox</div>
 			<div class="tournabox-container" id="utopian-open">
@@ -196,6 +206,7 @@ GARCIA-LOPEZ, Guillermo ESP [28]
 </script>
 
 		  </div>
+
 
 		</div>
 
@@ -306,7 +317,44 @@ f
 
 		  </div>
 		  
+		  <div class="subsection"><div class="subsection-title" id="quoting-the-filter-text">Quoting the Filter Text</div>
+			<p> Sometimes, you might need to insert a space or a
+			comma: <span class="icode"><span class="hl std">,</span></span> in your filter text. To do that,
+			you need to put quotes around the entire filter text. </p>
+			For example, to search for the string &quot;Williams, S&quot;,
+			enter: &quot;Williams, S&quot; in the filter box.
+
+			<p> To initialize your container with such a filter text,
+			use a single quote to wrap the double quotes:
+			  <span style="font-size: 26px"><pre class="code-txt"><span class="hl std">tournabox-filters='&quot;Williams, s&quot;'</span></pre></span>.</p>
+			<p> See Below, section &quot;Hiding the Menu Bar&quot; for an example.</p>
+
+		  </div>
+
+		  <div class="subsection"><div class="subsection-title" id="hiding-the-menu-bar">Hiding the Menu Bar</div>
+			<p> Especially when setting custom filters, you might want to hide the menu bar, to get a cleaner look. To do that, set the attribute
+			  <span class="icode"><span class="hl std">tournabox-hide-menubar</span></span> to <span class="icode"><span class="hl std">true</span></span>.</p>
+
+			<p> Here's an example which only shows a single player's road to the finals </p>
+
+			<pre class="code-xml"><span class="hl kwa">&lt;div</span><span class="hl std"> </span><span class="">class</span><span class="hl std">=</span><span class="hl str">&quot;tournabox-container&quot;</span><span class="hl std">
+	 </span><span class="">id</span><span class="hl std">=</span><span class="hl str">&quot;single-player-road&quot;</span><span class="hl std">
+	 </span><span class="">tournabox-entries</span><span class="hl std">=</span><span class="hl str">&quot;women-usopen-2014-entries&quot;</span><span class="hl std">
+	 </span><span class="">tournabox-outcomes</span><span class="hl std">=</span><span class="hl str">&quot;women-usopen-2014-outcomes&quot;</span><span class="hl std">
+	 </span><span class="">tournabox-hide-menubar</span><span class="hl std">=</span><span class="hl str">&quot;true&quot;</span><span class="hl std">
+	 </span><span class="">tournabox-groups</span><span class="hl std">=</span><span class="hl str">&quot;By Performance&quot;</span><span class="hl std">
+	 </span><span class="">tournabox-filters</span><span class="hl std">='</span><span class="hl str">&quot;Williams, s&quot;</span><span class="hl std">'</span><span class="hl kwa">&gt;</span><span class="hl kwa">&lt;/div</span><span class="hl kwa">&gt;</span><span class="hl std">
+</span></pre>
+
+		  <div class="subsection"><div class="subsection-title" id="what-you-see-hiding">The Resulting tournabox</div>
+			<div class="tournabox-container" id="single-player-road" tournabox-entries="women-usopen-2014-entries" tournabox-filters="&quot;Williams, s&quot;" tournabox-groups="By Performance" tournabox-hide-menubar="true" tournabox-outcomes="women-usopen-2014-outcomes"></div>
+
+		  </div>
+
+		  </div>
+
 		</div>
+
 
 		<div class="section"><div class="section-title" id="custom-styles">Custom Styles</div>
 		  <h2></h2>
