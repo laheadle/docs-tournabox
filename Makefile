@@ -56,6 +56,7 @@ gh-pages: setVersion checkStability getTournabox
 local-pages: build-local
 	cp `ocamlfind query tournabox`/tournabox.js $(TOURNABOX_TESTDIR)/js
 	cp `ocamlfind query tournabox`/tournabox.css $(TOURNABOX_TESTDIR)/css
+	cp `ocamlfind query tournabox`/tournabox.less $(TOURNABOX_TESTDIR)
 
 
 ### Implementation
@@ -88,5 +89,6 @@ endif
 getTournabox:
 	cp `ocamlfind query tournabox`/tournabox.js src/js
 	cp `ocamlfind query tournabox`/tournabox.css src/css
+	cp `ocamlfind query tournabox`/tournabox.less src
 
 
