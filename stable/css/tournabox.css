@@ -47,10 +47,14 @@
     width: 100%;
   }
 }
-.tournabox-container .tournabox-root .tournabox-results .tournabox-name {
+.tournabox-container .tournabox-root .tournabox-results .tournabox-name,
+.tournabox-container .tournabox-root .tournabox-results .tournabox-upset,
+.tournabox-container .tournabox-root .tournabox-results .tournabox-was-upset-by {
   cursor: pointer;
 }
-.tournabox-container .tournabox-root .tournabox-results .tournabox-name:hover {
+.tournabox-container .tournabox-root .tournabox-results .tournabox-name:hover,
+.tournabox-container .tournabox-root .tournabox-results .tournabox-upset:hover,
+.tournabox-container .tournabox-root .tournabox-results .tournabox-was-upset-by:hover {
   background-color: #ffe0e0;
 }
 .tournabox-container .tournabox-root .tournabox-results .tournabox-header-row .tournabox-header {

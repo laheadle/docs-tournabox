@@ -39,6 +39,10 @@ p {
 	line-height: 2;
 }
 
+.code-xml {
+	display: inline-block;
+}
+
 .hl.kwa {
 color: #1c45d6;
 /* font-weight: bold; */
