@@ -62,6 +62,9 @@
 			  optional attribute is a letter, such as 'w' for
 			  "withdrew" or 'q' for "qualifier." </p>
 			
+			<p> Note that if you are not using countries, you must
+			not <a href="#setting-groups-and-filters"> show the country group. </a> </p>
+
 			<p> The entries are found by starting from the id of the container,
 			  here <ic>"utopian-open,"</ic> and adding the string <ic>"-entries."</ic> Thus, by giving the entries element the id
 			  <ic>"utopian-open-entries,"</ic> you tell Tournabox which
@@ -82,6 +85,12 @@
 			  name, and case does not matter. For example, to abbreviate
 			  "Joe Smith" you could enter "joe" or "mith".</p>
 
+			<p> If one entry's full name is entirely contained in
+			another entry's full name, and you want to select the
+			shorter one, then enter its full name. For example, to
+			select "Joe Smith" over "Joe Smithson", enter "Joe
+			Smith". </p>
+
 			<p> Note that Sam Querrey (abbreviated 'qu') is listed
 			twice below. This means that he won in the first round, <emph>
 			and then won again </emph> in the second round.</p>
@@ -95,11 +104,13 @@
 
 		  </subsection>
 
+
 		  <subsection id="what-you-see" title="The Resulting tournabox">
 			<include file="data/utopian-open-container.html"/>
 			<include file="data/utopian-open-entries.html"/>
 			<include file="data/utopian-open-outcomes.html"/>
 		  </subsection>
+
 
 		</section>
 
@@ -181,7 +192,36 @@
 			<include file="data/russian-serbian-country-seed.html"/>
 		  </subsection>
 		  
+		  <subsection id="quoting-the-filter-text" title="Quoting the Filter Text">
+			<p> Sometimes, you might need to insert a space or a
+			comma: <icode>,</icode> in your filter text. To do that,
+			you need to put quotes around the entire filter text. </p>
+			For example, to search for the string "Williams, S",
+			enter: "Williams, S" in the filter box.
+
+			<p> To initialize your container with such a filter text,
+			use a single quote to wrap the double quotes:
+			  <span style="font-size: 26px"><hcode>tournabox-filters='"Williams, s"'</hcode></span>.</p>
+			<p> See Below, section "Hiding the Menu Bar" for an example.</p>
+
+		  </subsection>
+
+		  <subsection id="hiding-the-menu-bar" title="Hiding the Menu Bar">
+			<p> Especially when setting custom filters, you might want to hide the menu bar, to get a cleaner look. To do that, set the attribute
+			  <icode>tournabox-hide-menubar</icode> to <icode>true</icode>.</p>
+
+			<p> Here's an example which only shows a single player's road to the finals </p>
+
+			<hcode lang="xml" defer_="1"><include raw="true" file="data/single-player-road.html"/></hcode>
+
+		  <subsection id="what-you-see-hiding" title="The Resulting tournabox">
+			<include file="data/single-player-road.html"/>
+		  </subsection>
+
+		  </subsection>
+
 		</section>
+
 
 		<section id="custom-styles" title="Custom Styles">
 		  <h2></h2>
