@@ -69,7 +69,7 @@ color: #1c45d6;
 	float: right;
 	display: inline-block;
 	max-height: 700px;
-	overflow: scroll;
+	overflow: auto;
 }
 
 .headline h2 {
