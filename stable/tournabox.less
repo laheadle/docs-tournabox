@@ -1,0 +1,149 @@
+/* -*- mode: css -*- */
+
+@color-a: #D5EBED; // Menu and Brand Boxes
+@color-b: blue; // Brand link, seeded name, will face
+@color-c: red; // Was Defeated, was upset, name hover (lightened)
+@color-d: green; // root border, defeated, upset
+@color-e: purple; // country
+@color-f: black; // root color, advanced, to be decided, with a bye
+
+.tournabox-container {
+	.tournabox-root {
+		border: 1px solid @color-d;
+		font-size: 16px;
+		display: inline-block;
+		color: @color-f;
+		font-family: Arial, Sans Serif;
+
+		.tournabox-brand {
+			text-align: right;
+			padding: 6px;
+			background-color: @color-a;
+			a {
+				color: @color-b;
+				padding-right: 10px;
+				text-decoration: none;
+				font-style: italic;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+
+		.tournabox-menu {
+			background-color: @color-a;
+			span {
+				display: inline-block;
+				padding: 6px;
+			} 
+			input[type="checkbox"] {
+				margin: 0 20px 0 4px;
+				vertical-align: middle;
+			}
+			.tournabox-filter-input {
+				box-sizing: border-box;
+				border-radius: 5px;
+				padding: 0;
+			}
+		}
+
+		.tournabox-results {
+			@media (max-width:400px) {
+				table-layout: fixed;
+				width: 100%;
+			}
+			border-spacing: 0px;
+			overflow: auto;
+			padding: 4px;
+
+			.tournabox-name, .tournabox-upset, .tournabox-was-upset-by {
+				cursor: pointer;
+				&:hover {
+					background-color: lighten(color(@color-c), 44%);
+				}
+			}
+
+			.tournabox-header-row {
+				.tournabox-header {
+					padding: 8px;
+					font-size: 1.2em;
+					font-weight: bold;
+					.tournabox-name {
+						font-weight: normal;
+					}
+				}
+			}
+
+			.tournabox-odd {
+				background-color: lighten(color(gray), 42%);
+			}
+
+			.tournabox-country {
+				margin-left: 4px;
+				color: @color-e;
+				font-size: .8em;
+			}
+
+			.tournabox-seeded {
+				.tournabox-name {
+					color: darken(color(@color-b), 20%);
+				}
+				.tournabox-seed {
+					font-weight: bold;
+					&:before { content: ' ['; }
+					&:after { content: ']'; }
+					vertical-align: super;
+					font-size: .8em;
+				}
+			}
+
+			.tournabox-row {
+				vertical-align: baseline;
+				line-height: 1;
+
+				td {
+ 					padding: 2px 4px 2px 4px;
+					text-overflow: ellipsis;
+					overflow: hidden;
+				}
+
+				td:first-child {
+					padding-left: 7px;
+				}
+				.tournabox-entry {
+					font-style: italic;
+				}
+				.tournabox-was-defeated-by { color: @color-c }
+				.tournabox-defeated { color: @color-d }
+				.tournabox-upset {
+					color: @color-d;
+					font-weight: bold;
+				}
+				.tournabox-was-upset-by {
+					color: @color-c;
+					font-weight: bold;
+				}
+				.tournabox-advanced {
+					color: @color-f;
+				}
+				.tournabox-to-be-decided {
+					color: @color-f;
+				}
+				.tournabox-with-a-bye {
+					color: @color-f;
+				}
+
+				.tournabox-will-face { color: @color-b }
+
+				.tournabox-in-round {
+					.tournabox-round {
+						margin-left: 5px;
+						text-decoration: underline;
+						font-weight: bold;
+					}
+				}
+
+			}
+		}
+	}	
+}
