@@ -5,6 +5,14 @@
   display: inline-block;
   color: black;
   font-family: Arial, Sans Serif;
+  /* Die Bootstrap, Die! */
+}
+.tournabox-container .tournabox-root * {
+  box-sizing: content-box;
+}
+.tournabox-container .tournabox-root:before,
+.tournabox-container .tournabox-root:after {
+  box-sizing: content-box;
 }
 .tournabox-container .tournabox-root .tournabox-brand {
   text-align: right;
@@ -23,7 +31,11 @@
 .tournabox-container .tournabox-root .tournabox-menu {
   background-color: #d5ebed;
 }
-.tournabox-container .tournabox-root .tournabox-menu span {
+.tournabox-container .tournabox-root .tournabox-menu .tournabox-filter-span {
+  display: block;
+  padding: 6px;
+}
+.tournabox-container .tournabox-root .tournabox-menu .tournabox-menu-checkspan {
   display: inline-block;
   padding: 6px;
 }
@@ -45,6 +57,11 @@
   .tournabox-container .tournabox-root .tournabox-results {
     table-layout: fixed;
     width: 100%;
+  }
+}
+@media (min-width: 900px) {
+  .tournabox-container .tournabox-root .tournabox-results {
+    min-width: 600px;
   }
 }
 .tournabox-container .tournabox-root .tournabox-results .tournabox-name,
