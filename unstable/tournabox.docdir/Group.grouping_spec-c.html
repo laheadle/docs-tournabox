@@ -1,0 +1,81 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link rel="Up" href="Group.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of exceptions" rel=Appendix href="index_exceptions.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of class methods" rel=Appendix href="index_methods.html">
+<link title="Index of class types" rel=Appendix href="index_class_types.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Index of module types" rel=Appendix href="index_module_types.html">
+<link title="Tournabox_lib" rel="Chapter" href="Tournabox_lib.html">
+<link title="Tourney" rel="Chapter" href="Tourney.html">
+<link title="Group" rel="Chapter" href="Group.html">
+<link title="Grouping_specs" rel="Chapter" href="Grouping_specs.html">
+<link title="Contest" rel="Chapter" href="Contest.html">
+<link title="Entry" rel="Chapter" href="Entry.html">
+<link title="Util" rel="Chapter" href="Util.html">
+<link title="Columns" rel="Chapter" href="Columns.html">
+<link title="Jsutil" rel="Chapter" href="Jsutil.html"><title>Group.grouping_spec</title>
+</head>
+<body>
+<div class="navbar">&nbsp;<a class="up" href="Group.html" title="Group">Up</a>
+&nbsp;</div>
+<h1>Class type <a href="type_Group.grouping_spec.html">Group.grouping_spec</a></h1>
+
+<pre><span id="TYPEgrouping_spec"><span class="keyword">class type</span> grouping_spec</span> = <code class="code">object</code> <a href="Group.grouping_spec-c.html">..</a> <code class="code">end</code></pre><div class="info classtype top">
+A way of grouping and presenting an ordered collection of groups
+	of contests.
+	<b>This is one of the central abstractions of Tournabox.</b><br>
+</div>
+<hr width="100%">
+
+<pre><span id="METHODname"><span class="keyword">method</span> name</span> : <code class="type">string</code></pre><div class="info ">
+The name of the grouping_spec. A legal value of the
+	  comma-separated tournabox-groups container attribue.<br>
+</div>
+
+<pre><span id="METHODheader_spec"><span class="keyword">method</span> header_spec</span> : <code class="type">num_rounds:int -> num_groups:int -> pos:int -> t -> <a href="Columns.html#TYPEheader_spec">Columns.header_spec</a></code></pre><div class="info ">
+Returns a <a href="Columns.html#TYPEheader_spec"><code class="code">Columns.header_spec</code></a> to specify how to display the header of a
+	  group. Most of the parameters are only used by `By Round' to
+	  calculate the round number displayed.
+<p>
+
+	  Given the total number of rounds in the tournabox upon
+	  completion; the number of groups in the <a href="Group.GroupList.html"><code class="code">Group.GroupList</code></a>
+	  (i.e. the number of rounds played so far), the index of the
+	  group in the <a href="Group.GroupList.html"><code class="code">Group.GroupList</code></a> (i.e. the round); and
+	  the group in need of a header.
+<p>
+
+	  All of the grouping_specs except <a href="Grouping_specs.html#VALround"><code class="code">Grouping_specs.round</code></a> simply look at the
+	  first contest in the group, and pull out a prominent field like
+	  name or country.<br>
+</div>
+
+<pre><span id="METHODcompare_contest"><span class="keyword">method</span> compare_contest</span> : <code class="type"><a href="Group.html#TYPEcontest">contest</a> -> <a href="Group.html#TYPEcontest">contest</a> -> int</code></pre><div class="info ">
+Compares two contests for the purposes of sorting them within a
+	  group.<br>
+</div>
+
+<pre><span id="METHODcompare_group"><span class="keyword">method</span> compare_group</span> : <code class="type">t -> t -> int</code></pre><div class="info ">
+Compares two groups for the purposes of sorting them within a
+	  GroupList.<br>
+</div>
+
+<pre><span id="METHODin_group"><span class="keyword">method</span> in_group</span> : <code class="type"><a href="Group.html#TYPEcontest">contest</a> -> t -> <a href="Group.html#TYPEgroup_result">group_result</a></code></pre><div class="info ">
+Returns whether a contest is in a group. If the return value has
+	  <a href="Group.html#TYPEELTgroup_result.quit"><code class="code">Group.group_result.quit</code></a> = true, then give up: stop trying
+	  to find a group to put the contest in.<br>
+</div>
+
+<pre><span id="METHODcolumn_extractor"><span class="keyword">method</span> column_extractor</span> : <code class="type">num_contests:int -> index:int -> <a href="Group.html#TYPEcontest">contest</a> -> <a href="Columns.html#TYPEcolumn">Columns.column</a> list</code></pre><div class="info ">
+Returns the columns to render for a contest. Given the number
+	  of contests in the group; the index of the contest in the
+	  group; and the contest.<br>
+</div>
+</body></html>

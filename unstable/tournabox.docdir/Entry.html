@@ -1,0 +1,112 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link rel="previous" href="Contest.html">
+<link rel="next" href="Util.html">
+<link rel="Up" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of exceptions" rel=Appendix href="index_exceptions.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of class methods" rel=Appendix href="index_methods.html">
+<link title="Index of class types" rel=Appendix href="index_class_types.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Index of module types" rel=Appendix href="index_module_types.html">
+<link title="Tournabox_lib" rel="Chapter" href="Tournabox_lib.html">
+<link title="Tourney" rel="Chapter" href="Tourney.html">
+<link title="Group" rel="Chapter" href="Group.html">
+<link title="Grouping_specs" rel="Chapter" href="Grouping_specs.html">
+<link title="Contest" rel="Chapter" href="Contest.html">
+<link title="Entry" rel="Chapter" href="Entry.html">
+<link title="Util" rel="Chapter" href="Util.html">
+<link title="Columns" rel="Chapter" href="Columns.html">
+<link title="Jsutil" rel="Chapter" href="Jsutil.html"><title>Entry</title>
+</head>
+<body>
+<div class="navbar"><a class="pre" href="Contest.html" title="Contest">Previous</a>
+&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;<a class="post" href="Util.html" title="Util">Next</a>
+</div>
+<h1>Module <a href="type_Entry.html">Entry</a></h1>
+
+<pre><span class="keyword">module</span> Entry: <code class="code">sig</code> <a href="Entry.html">..</a> <code class="code">end</code></pre><div class="info module top">
+Each Entry in a tournament takes up a slot.<br>
+</div>
+<hr width="100%">
+
+<pre><code><span id="TYPEt"><span class="keyword">type</span> <code class="type"></code>t</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTt.player">player</span>&nbsp;: <code class="type">string</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTt.country">country</span>&nbsp;: <code class="type">string option</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTt.seed">seed</span>&nbsp;: <code class="type">int option</code>;</code></td>
+
+</tr></table>
+}
+
+<div class="info ">
+An entry who may win or lose against another Entry.t, but always
+	beats a bye.<br>
+</div>
+
+
+<pre><span id="VALto_string"><span class="keyword">val</span> to_string</span> : <code class="type"><a href="Entry.html#TYPEt">t</a> -> string</code></pre>
+<pre><code><span id="TYPEslot"><span class="keyword">type</span> <code class="type"></code>slot</span> = </code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTslot.Bye"><span class="constructor">Bye</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTslot.Somebody"><span class="constructor">Somebody</span></span> <span class="keyword">of</span> <code class="type"><a href="Entry.html#TYPEt">t</a></code></code></td>
+
+</tr></table>
+
+<div class="info ">
+A slot in the tournament. May be a Somebody, which can win or
+	lose, or a Bye, which always loses.<br>
+</div>
+
+
+<pre><span id="VALslot_of_string"><span class="keyword">val</span> slot_of_string</span> : <code class="type">?expect_country:bool -> string -> <a href="Entry.html#TYPEslot">slot</a></code></pre><div class="info ">
+Parse a string to a slot<br>
+</div>
+
+<pre><span id="VALfetch"><span class="keyword">val</span> fetch</span> : <code class="type"><a href="Entry.html#TYPEslot">slot</a> -> <a href="Entry.html#TYPEt">t</a></code></pre><div class="info ">
+Expects a Somebody. Assertion failure on Bye<br>
+</div>
+
+<pre><span id="VALis_bye"><span class="keyword">val</span> is_bye</span> : <code class="type"><a href="Entry.html#TYPEslot">slot</a> -> bool</code></pre><div class="info ">
+True of Bye slots<br>
+</div>
+
+<pre><span id="VALis_t"><span class="keyword">val</span> is_t</span> : <code class="type"><a href="Entry.html#TYPEslot">slot</a> -> bool</code></pre><div class="info ">
+True of Somebody slots<br>
+</div>
+
+<pre><span id="VALcompare_seeds"><span class="keyword">val</span> compare_seeds</span> : <code class="type"><a href="Entry.html#TYPEt">t</a> -> <a href="Entry.html#TYPEt">t</a> -> if_none:(unit -> int) -> int</code></pre><div class="info ">
+Compare the seeds of two t's so that the lower seed comes
+	first. If neither has a seed, then call if_none<br>
+</div>
+</body></html>

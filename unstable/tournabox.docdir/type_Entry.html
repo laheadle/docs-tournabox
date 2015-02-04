@@ -1,0 +1,32 @@
+<html><head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of exceptions" rel=Appendix href="index_exceptions.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of class methods" rel=Appendix href="index_methods.html">
+<link title="Index of class types" rel=Appendix href="index_class_types.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Index of module types" rel=Appendix href="index_module_types.html">
+<link title="Tournabox_lib" rel="Chapter" href="Tournabox_lib.html">
+<link title="Tourney" rel="Chapter" href="Tourney.html">
+<link title="Group" rel="Chapter" href="Group.html">
+<link title="Grouping_specs" rel="Chapter" href="Grouping_specs.html">
+<link title="Contest" rel="Chapter" href="Contest.html">
+<link title="Entry" rel="Chapter" href="Entry.html">
+<link title="Util" rel="Chapter" href="Util.html">
+<link title="Columns" rel="Chapter" href="Columns.html">
+<link title="Jsutil" rel="Chapter" href="Jsutil.html"><title>Entry</title>
+</head>
+<body>
+<code class="code"><span class="keyword">sig</span><br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;t&nbsp;=&nbsp;{&nbsp;player&nbsp;:&nbsp;string;&nbsp;country&nbsp;:&nbsp;string&nbsp;option;&nbsp;seed&nbsp;:&nbsp;int&nbsp;option;&nbsp;}<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;to_string&nbsp;:&nbsp;<span class="constructor">Entry</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;string<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;slot&nbsp;=&nbsp;<span class="constructor">Bye</span>&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Somebody</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Entry</span>.t<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;slot_of_string&nbsp;:&nbsp;?expect_country:bool&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;string&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Entry</span>.slot<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;fetch&nbsp;:&nbsp;<span class="constructor">Entry</span>.slot&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Entry</span>.t<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;is_bye&nbsp;:&nbsp;<span class="constructor">Entry</span>.slot&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;is_t&nbsp;:&nbsp;<span class="constructor">Entry</span>.slot&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;compare_seeds&nbsp;:&nbsp;<span class="constructor">Entry</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Entry</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;if_none:(unit&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int)&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int<br>
+<span class="keyword">end</span></code></body></html>

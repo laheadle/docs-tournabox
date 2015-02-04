@@ -1,7 +1,7 @@
 /* -*- mode: css -*- */
 .tournabox-container .tournabox-root {
   border: 1px solid green;
-  font-size: 16px;
+  font-size: 14px;
   display: inline-block;
   color: black;
   font-family: Arial, Sans Serif;
@@ -144,6 +144,9 @@
 }
 .tournabox-container .tournabox-root .tournabox-results .tournabox-row .tournabox-will-face {
   color: #0000ff;
+}
+.tournabox-container .tournabox-root .tournabox-results .tournabox-row .tournabox-in-round {
+  width: 5em;
 }
 .tournabox-container .tournabox-root .tournabox-results .tournabox-row .tournabox-in-round .tournabox-round {
   margin-left: 5px;

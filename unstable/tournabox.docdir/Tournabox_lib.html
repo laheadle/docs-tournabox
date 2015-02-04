@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link rel="next" href="Tourney.html">
+<link rel="Up" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of exceptions" rel=Appendix href="index_exceptions.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of class methods" rel=Appendix href="index_methods.html">
+<link title="Index of class types" rel=Appendix href="index_class_types.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Index of module types" rel=Appendix href="index_module_types.html">
+<link title="Tournabox_lib" rel="Chapter" href="Tournabox_lib.html">
+<link title="Tourney" rel="Chapter" href="Tourney.html">
+<link title="Group" rel="Chapter" href="Group.html">
+<link title="Grouping_specs" rel="Chapter" href="Grouping_specs.html">
+<link title="Contest" rel="Chapter" href="Contest.html">
+<link title="Entry" rel="Chapter" href="Entry.html">
+<link title="Util" rel="Chapter" href="Util.html">
+<link title="Columns" rel="Chapter" href="Columns.html">
+<link title="Jsutil" rel="Chapter" href="Jsutil.html"><title>Tournabox_lib</title>
+</head>
+<body>
+<div class="navbar">&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;<a class="post" href="Tourney.html" title="Tourney">Next</a>
+</div>
+<h1>Module <a href="type_Tournabox_lib.html">Tournabox_lib</a></h1>
+
+<pre><span class="keyword">module</span> Tournabox_lib: <code class="code">sig</code> <a href="Tournabox_lib.html">..</a> <code class="code">end</code></pre><div class="info module top">
+The top-level tournabox library. Clients can use these types and
+	values to find and run tournaboxes on web pages.<br>
+</div>
+<hr width="100%">
+
+<pre><span id="TYPEcontainer"><span class="keyword">type</span> <code class="type"></code>container</span> = <code class="type">Dom_html.element Js.t</code> </pre>
+<div class="info ">
+An HTML element that will contain a visible tournabox.<br>
+</div>
+
+
+<pre><span id="TYPEtourney_shell"><span class="keyword">type</span> <code class="type"></code>tourney_shell</span> </pre>
+<div class="info ">
+A parsed container. The argument to run/play a tournabox.<br>
+</div>
+
+
+<pre><span id="VALget_all_containers"><span class="keyword">val</span> get_all_containers</span> : <code class="type">unit -> <a href="Tournabox_lib.html#TYPEcontainer">container</a> list</code></pre><div class="info ">
+Get a list of all the containers on the page.<br>
+</div>
+
+<pre><span id="VALget_tourney_shell"><span class="keyword">val</span> get_tourney_shell</span> : <code class="type"><a href="Tournabox_lib.html#TYPEcontainer">container</a> -> <a href="Tournabox_lib.html#TYPEtourney_shell">tourney_shell</a> option * string</code></pre><div class="info ">
+Given a container, return a tourney shell or None and an error
+	message.<br>
+</div>
+
+<pre><span id="VALplay"><span class="keyword">val</span> play</span> : <code class="type"><a href="Tournabox_lib.html#TYPEtourney_shell">tourney_shell</a> -> unit</code></pre><div class="info ">
+Play and display a tourney_shell.<br>
+</div>
+
+<pre><span id="VALget_all_tourney_shells"><span class="keyword">val</span> get_all_tourney_shells</span> : <code class="type">unit -> (<a href="Tournabox_lib.html#TYPEtourney_shell">tourney_shell</a> option * string) list</code></pre><div class="info ">
+Get all tourney shell options on a page, with error messages.<br>
+</div>
+</body></html>

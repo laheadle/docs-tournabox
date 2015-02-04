@@ -52,12 +52,12 @@ outDir=./$(stability)
 gh-pages: setVersion checkStability getTournabox
 	rm -rf $(outDir)
 	stog src -d $(outDir) --site-url $(globalRoot)/$(stability) --tmpl $(templates)
+	cp -r `ocamlfind query tournabox`/../../doc/tournabox/* $(outDir)
 
 local-pages: build-local
 	cp `ocamlfind query tournabox`/tournabox.js $(TOURNABOX_TESTDIR)/js
 	cp `ocamlfind query tournabox`/tournabox.css $(TOURNABOX_TESTDIR)/css
 	cp `ocamlfind query tournabox`/tournabox.less $(TOURNABOX_TESTDIR)
-
 
 ### Implementation
 

@@ -1,0 +1,196 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link rel="previous" href="Util.html">
+<link rel="next" href="Jsutil.html">
+<link rel="Up" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of exceptions" rel=Appendix href="index_exceptions.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of class methods" rel=Appendix href="index_methods.html">
+<link title="Index of class types" rel=Appendix href="index_class_types.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Index of module types" rel=Appendix href="index_module_types.html">
+<link title="Tournabox_lib" rel="Chapter" href="Tournabox_lib.html">
+<link title="Tourney" rel="Chapter" href="Tourney.html">
+<link title="Group" rel="Chapter" href="Group.html">
+<link title="Grouping_specs" rel="Chapter" href="Grouping_specs.html">
+<link title="Contest" rel="Chapter" href="Contest.html">
+<link title="Entry" rel="Chapter" href="Entry.html">
+<link title="Util" rel="Chapter" href="Util.html">
+<link title="Columns" rel="Chapter" href="Columns.html">
+<link title="Jsutil" rel="Chapter" href="Jsutil.html"><title>Columns</title>
+</head>
+<body>
+<div class="navbar"><a class="pre" href="Util.html" title="Util">Previous</a>
+&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;<a class="post" href="Jsutil.html" title="Jsutil">Next</a>
+</div>
+<h1>Module <a href="type_Columns.html">Columns</a></h1>
+
+<pre><span class="keyword">module</span> Columns: <code class="code">sig</code> <a href="Columns.html">..</a> <code class="code">end</code></pre><div class="info module top">
+The basic units of visual information in a tournabox UI.  Columns
+   are short lists of textual fragments, each element of which may
+   have css classes. This allows us to do things like style the number
+   "6" in the column "in round 6."
+<p>
+
+   Each column may specify whether or not filter text applies to it,
+   that is, whether it is "filterable."
+<p>
+
+   Functions exist to render columns as HTML and to test them against
+   filter text.<br>
+</div>
+<hr width="100%">
+
+<pre><code><span id="TYPEshallow_span"><span class="keyword">type</span> <code class="type"></code>shallow_span</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTshallow_span.class_name">class_name</span>&nbsp;: <code class="type">string</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTshallow_span.text">text</span>&nbsp;: <code class="type">string</code>;</code></td>
+
+</tr></table>
+}
+
+<div class="info ">
+A non-nested html span with a css class.<br>
+</div>
+
+
+<pre><code><span id="TYPEcolumn_fragment"><span class="keyword">type</span> <code class="type"></code>column_fragment</span> = </code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTcolumn_fragment.Text"><span class="constructor">Text</span></span> <span class="keyword">of</span> <code class="type">string</code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTcolumn_fragment.Elt"><span class="constructor">Elt</span></span> <span class="keyword">of</span> <code class="type"><a href="Columns.html#TYPEshallow_span">shallow_span</a></code></code></td>
+
+</tr></table>
+
+<div class="info ">
+The atomic element of a column.<br>
+</div>
+
+
+<pre><code><span id="TYPEcolumn"><span class="keyword">type</span> <code class="type"></code>column</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTcolumn.content">content</span>&nbsp;: <code class="type"><a href="Columns.html#TYPEcolumn_fragment">column_fragment</a> list</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTcolumn.class_name">class_name</span>&nbsp;: <code class="type">string option</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTcolumn.should_filter">should_filter</span>&nbsp;: <code class="type">bool</code>;</code></td>
+
+</tr></table>
+}
+
+<div class="info ">
+A column in the UI.<br>
+</div>
+
+
+<pre><code><span id="TYPEheader_spec"><span class="keyword">type</span> <code class="type"></code>header_spec</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTheader_spec.header">header</span>&nbsp;: <code class="type"><a href="Columns.html#TYPEcolumn">column</a></code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTheader_spec.should_filter_header">should_filter_header</span>&nbsp;: <code class="type">bool</code>;</code></td>
+
+</tr></table>
+}
+
+<div class="info ">
+A header column of a group<br>
+</div>
+
+
+<pre><span id="VALcolumn_content_string"><span class="keyword">val</span> column_content_string</span> : <code class="type"><a href="Columns.html#TYPEcolumn_fragment">column_fragment</a> list -> string</code></pre><div class="info ">
+Get The content of a column as a string<br>
+</div>
+
+<pre><span id="VALis_upset"><span class="keyword">val</span> is_upset</span> : <code class="type"><a href="Columns.html#TYPEcolumn">column</a> list -> bool</code></pre>
+<pre><span id="VALentry"><span class="keyword">val</span> entry</span> : <code class="type">?filterable:bool -> <a href="Entry.html#TYPEt">Entry.t</a> -> <a href="Columns.html#TYPEcolumn">column</a></code></pre><div class="info ">
+Render an entry as a complex column, including country and
+	seed.<br>
+</div>
+
+<pre><span id="VALjust_country"><span class="keyword">val</span> just_country</span> : <code class="type">string -> <a href="Columns.html#TYPEcolumn">column</a></code></pre><div class="info ">
+Get a column containing just a country name<br>
+</div>
+
+<pre><span id="VALas_header"><span class="keyword">val</span> as_header</span> : <code class="type"><a href="Columns.html#TYPEcolumn">column</a> -> <a href="Columns.html#TYPEcolumn">column</a></code></pre><div class="info ">
+Adds a header class to an existing column, thereby treating it as
+	a header.<br>
+</div>
+
+<pre><span id="VALin_round"><span class="keyword">val</span> in_round</span> : <code class="type">int -> <a href="Columns.html#TYPEcolumn">column</a></code></pre><div class="info ">
+"In round N"<br>
+</div>
+
+<pre><span id="VALadvanced"><span class="keyword">val</span> advanced</span> : <code class="type"><a href="Columns.html#TYPEcolumn">column</a></code></pre><div class="info ">
+"advanced"<br>
+</div>
+
+<pre><span id="VALwith_a_bye"><span class="keyword">val</span> with_a_bye</span> : <code class="type"><a href="Columns.html#TYPEcolumn">column</a></code></pre><div class="info ">
+"With a bye"<br>
+</div>
+
+<pre><span id="VALdefeated"><span class="keyword">val</span> defeated</span> : <code class="type">winner:<a href="Entry.html#TYPEt">Entry.t</a> -> <a href="Entry.html#TYPEt">Entry.t</a> -> <a href="Columns.html#TYPEcolumn">column</a></code></pre><div class="info ">
+Renders either a "defeated" or "upset" column, based on seed
+	disparity.<br>
+</div>
+
+<pre><span id="VALwas_defeated_by"><span class="keyword">val</span> was_defeated_by</span> : <code class="type">winner:<a href="Entry.html#TYPEt">Entry.t</a> -> <a href="Entry.html#TYPEt">Entry.t</a> -> <a href="Columns.html#TYPEcolumn">column</a></code></pre><div class="info ">
+Renders either a "defeated" or "upset" column, based on seed
+	disparity.<br>
+</div>
+
+<pre><span id="VALwill_face"><span class="keyword">val</span> will_face</span> : <code class="type"><a href="Columns.html#TYPEcolumn">column</a></code></pre><div class="info ">
+"will face"<br>
+</div>
+
+<pre><span id="VALto_be_decided"><span class="keyword">val</span> to_be_decided</span> : <code class="type"><a href="Columns.html#TYPEcolumn">column</a></code></pre><div class="info ">
+"to be decided"<br>
+</div>
+
+<pre><span id="VALplain"><span class="keyword">val</span> plain</span> : <code class="type">should_filter:bool -> string -> <a href="Columns.html#TYPEcolumn">column</a></code></pre><div class="info ">
+Just a plain string<br>
+</div>
+</body></html>

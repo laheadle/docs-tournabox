@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link rel="previous" href="Tournabox_lib.html">
+<link rel="next" href="Group.html">
+<link rel="Up" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of exceptions" rel=Appendix href="index_exceptions.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of class methods" rel=Appendix href="index_methods.html">
+<link title="Index of class types" rel=Appendix href="index_class_types.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Index of module types" rel=Appendix href="index_module_types.html">
+<link title="Tournabox_lib" rel="Chapter" href="Tournabox_lib.html">
+<link title="Tourney" rel="Chapter" href="Tourney.html">
+<link title="Group" rel="Chapter" href="Group.html">
+<link title="Grouping_specs" rel="Chapter" href="Grouping_specs.html">
+<link title="Contest" rel="Chapter" href="Contest.html">
+<link title="Entry" rel="Chapter" href="Entry.html">
+<link title="Util" rel="Chapter" href="Util.html">
+<link title="Columns" rel="Chapter" href="Columns.html">
+<link title="Jsutil" rel="Chapter" href="Jsutil.html"><title>Tourney</title>
+</head>
+<body>
+<div class="navbar"><a class="pre" href="Tournabox_lib.html" title="Tournabox_lib">Previous</a>
+&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;<a class="post" href="Group.html" title="Group">Next</a>
+</div>
+<h1>Module <a href="type_Tourney.html">Tourney</a></h1>
+
+<pre><span class="keyword">module</span> Tourney: <code class="code">sig</code> <a href="Tourney.html">..</a> <code class="code">end</code></pre><div class="info module top">
+The fundamental type of a tournament<br>
+</div>
+<hr width="100%">
+
+<pre><span id="TYPEtourney"><span class="keyword">type</span> <code class="type"></code>tourney</span> </pre>
+
+
+<pre><span id="VALmake"><span class="keyword">val</span> make</span> : <code class="type"><a href="Entry.html#TYPEslot">Entry.slot</a> list -> <a href="Tourney.html#TYPEtourney">tourney</a></code></pre><div class="info ">
+Make a tournament from some entries.<br>
+</div>
+
+<pre><span id="VALwon"><span class="keyword">val</span> won</span> : <code class="type"><a href="Tourney.html#TYPEtourney">tourney</a> -> string -> <a href="Tourney.html#TYPEtourney">tourney</a></code></pre><div class="info ">
+Record a winner.<br>
+</div>
+
+<pre><span id="VALselect_grouped"><span class="keyword">val</span> select_grouped</span> : <code class="type"><a href="Group.grouping_spec-c.html">Group.grouping_spec</a> -> <a href="Tourney.html#TYPEtourney">tourney</a> -> Group.GroupList.t</code></pre><div class="info ">
+Group the results.<br>
+</div>
+
+<pre><span id="VALnum_rounds"><span class="keyword">val</span> num_rounds</span> : <code class="type"><a href="Tourney.html#TYPEtourney">tourney</a> -> int</code></pre><div class="info ">
+Get the number of rounds in a tournament.<br>
+</div>
+</body></html>

@@ -1,0 +1,84 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link rel="previous" href="Tourney.html">
+<link rel="next" href="Grouping_specs.html">
+<link rel="Up" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of exceptions" rel=Appendix href="index_exceptions.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of class methods" rel=Appendix href="index_methods.html">
+<link title="Index of class types" rel=Appendix href="index_class_types.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Index of module types" rel=Appendix href="index_module_types.html">
+<link title="Tournabox_lib" rel="Chapter" href="Tournabox_lib.html">
+<link title="Tourney" rel="Chapter" href="Tourney.html">
+<link title="Group" rel="Chapter" href="Group.html">
+<link title="Grouping_specs" rel="Chapter" href="Grouping_specs.html">
+<link title="Contest" rel="Chapter" href="Contest.html">
+<link title="Entry" rel="Chapter" href="Entry.html">
+<link title="Util" rel="Chapter" href="Util.html">
+<link title="Columns" rel="Chapter" href="Columns.html">
+<link title="Jsutil" rel="Chapter" href="Jsutil.html"><title>Group</title>
+</head>
+<body>
+<div class="navbar"><a class="pre" href="Tourney.html" title="Tourney">Previous</a>
+&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;<a class="post" href="Grouping_specs.html" title="Grouping_specs">Next</a>
+</div>
+<h1>Module <a href="type_Group.html">Group</a></h1>
+
+<pre><span class="keyword">module</span> Group: <code class="code">sig</code> <a href="Group.html">..</a> <code class="code">end</code></pre><div class="info module top">
+Types and functions for grouping, sorting, and rendering
+	contests.<br>
+</div>
+<hr width="100%">
+
+<pre><span id="TYPEcontest"><span class="keyword">type</span> <code class="type"></code>contest</span> = <code class="type"><a href="Entry.html#TYPEslot">Entry.slot</a> <a href="Contest.html#TYPEt">Contest.t</a></code> </pre>
+<div class="info ">
+An alias for the type of contests that are grouped.<br>
+</div>
+
+
+<pre><span class="keyword">module type</span> <a href="Group.GROUP.html">GROUP</a> = <code class="code">sig</code> <a href="Group.GROUP.html">..</a> <code class="code">end</code></pre><div class="info">
+This module type encapsulates types and functions for working with
+	groups of contests
+</div>
+
+<pre><span class="keyword">module</span> <a href="Group.Group.html">Group</a>: <code class="type"><a href="Group.GROUP.html">GROUP</a></code><code class="type"> </code></pre>
+<pre><code><span id="TYPEgroup_result"><span class="keyword">type</span> <code class="type"></code>group_result</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgroup_result.quit">quit</span>&nbsp;: <code class="type">bool</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgroup_result.this_group">this_group</span>&nbsp;: <code class="type">bool</code>;</code></td>
+
+</tr></table>
+}
+
+<div class="info ">
+Return value of <a href="Group.grouping_spec-c.html#METHODin_group"><code class="code">Group.grouping_spec.in_group</code></a><br>
+</div>
+
+
+<pre><span id="TYPEgrouping_spec"><span class="keyword">class type</span> <a href="Group.grouping_spec-c.html">grouping_spec</a></span> = <code class="code">object</code> <a href="Group.grouping_spec-c.html">..</a> <code class="code">end</code></pre><div class="info">
+A way of grouping and presenting an ordered collection of groups
+	of contests.
+</div>
+<br>
+This module type specifies types and functions for working with
+	ordered collections of groups of contests. Tournabox displays one
+	of them at any given time<br>
+
+<pre><span class="keyword">module type</span> <a href="Group.GROUP_LIST.html">GROUP_LIST</a> = <code class="code">sig</code> <a href="Group.GROUP_LIST.html">..</a> <code class="code">end</code></pre>
+<pre><span class="keyword">module</span> <a href="Group.GroupList.html">GroupList</a>: <code class="type"><a href="Group.GROUP_LIST.html">GROUP_LIST</a></code><code class="type"> </code></pre></body></html>

@@ -1,0 +1,48 @@
+<html><head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of exceptions" rel=Appendix href="index_exceptions.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of class methods" rel=Appendix href="index_methods.html">
+<link title="Index of class types" rel=Appendix href="index_class_types.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Index of module types" rel=Appendix href="index_module_types.html">
+<link title="Tournabox_lib" rel="Chapter" href="Tournabox_lib.html">
+<link title="Tourney" rel="Chapter" href="Tourney.html">
+<link title="Group" rel="Chapter" href="Group.html">
+<link title="Grouping_specs" rel="Chapter" href="Grouping_specs.html">
+<link title="Contest" rel="Chapter" href="Contest.html">
+<link title="Entry" rel="Chapter" href="Entry.html">
+<link title="Util" rel="Chapter" href="Util.html">
+<link title="Columns" rel="Chapter" href="Columns.html">
+<link title="Jsutil" rel="Chapter" href="Jsutil.html"><title>Columns</title>
+</head>
+<body>
+<code class="code"><span class="keyword">sig</span><br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;shallow_span&nbsp;=&nbsp;{&nbsp;class_name&nbsp;:&nbsp;string;&nbsp;text&nbsp;:&nbsp;string;&nbsp;}<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;column_fragment&nbsp;=&nbsp;<span class="constructor">Text</span>&nbsp;<span class="keyword">of</span>&nbsp;string&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Elt</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Columns</span>.shallow_span<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;column&nbsp;=&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;content&nbsp;:&nbsp;<span class="constructor">Columns</span>.column_fragment&nbsp;list;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;class_name&nbsp;:&nbsp;string&nbsp;option;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;should_filter&nbsp;:&nbsp;bool;<br>
+&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;header_spec&nbsp;=&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;header&nbsp;:&nbsp;<span class="constructor">Columns</span>.column;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;should_filter_header&nbsp;:&nbsp;bool;<br>
+&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;column_content_string&nbsp;:&nbsp;<span class="constructor">Columns</span>.column_fragment&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;string<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;is_upset&nbsp;:&nbsp;<span class="constructor">Columns</span>.column&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;entry&nbsp;:&nbsp;?filterable:bool&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Entry</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Columns</span>.column<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;just_country&nbsp;:&nbsp;string&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Columns</span>.column<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;as_header&nbsp;:&nbsp;<span class="constructor">Columns</span>.column&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Columns</span>.column<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;in_round&nbsp;:&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Columns</span>.column<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;advanced&nbsp;:&nbsp;<span class="constructor">Columns</span>.column<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;with_a_bye&nbsp;:&nbsp;<span class="constructor">Columns</span>.column<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;defeated&nbsp;:&nbsp;winner:<span class="constructor">Entry</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Entry</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Columns</span>.column<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;was_defeated_by&nbsp;:&nbsp;winner:<span class="constructor">Entry</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Entry</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Columns</span>.column<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;will_face&nbsp;:&nbsp;<span class="constructor">Columns</span>.column<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;to_be_decided&nbsp;:&nbsp;<span class="constructor">Columns</span>.column<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;plain&nbsp;:&nbsp;should_filter:bool&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;string&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Columns</span>.column<br>
+<span class="keyword">end</span></code></body></html>

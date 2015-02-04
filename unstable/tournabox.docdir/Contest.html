@@ -1,0 +1,111 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link rel="previous" href="Grouping_specs.html">
+<link rel="next" href="Entry.html">
+<link rel="Up" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of exceptions" rel=Appendix href="index_exceptions.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of class methods" rel=Appendix href="index_methods.html">
+<link title="Index of class types" rel=Appendix href="index_class_types.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Index of module types" rel=Appendix href="index_module_types.html">
+<link title="Tournabox_lib" rel="Chapter" href="Tournabox_lib.html">
+<link title="Tourney" rel="Chapter" href="Tourney.html">
+<link title="Group" rel="Chapter" href="Group.html">
+<link title="Grouping_specs" rel="Chapter" href="Grouping_specs.html">
+<link title="Contest" rel="Chapter" href="Contest.html">
+<link title="Entry" rel="Chapter" href="Entry.html">
+<link title="Util" rel="Chapter" href="Util.html">
+<link title="Columns" rel="Chapter" href="Columns.html">
+<link title="Jsutil" rel="Chapter" href="Jsutil.html"><title>Contest</title>
+</head>
+<body>
+<div class="navbar"><a class="pre" href="Grouping_specs.html" title="Grouping_specs">Previous</a>
+&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;<a class="post" href="Entry.html" title="Entry">Next</a>
+</div>
+<h1>Module <a href="type_Contest.html">Contest</a></h1>
+
+<pre><span class="keyword">module</span> Contest: <code class="code">sig</code> <a href="Contest.html">..</a> <code class="code">end</code></pre><div class="info module top">
+A contest is a decision point in a tournament, when one of two
+	contestants is eliminated from the tournament, and the other one moves
+	on to the next round (or wins the tournament).<br>
+</div>
+<hr width="100%">
+
+<pre><code><span id="TYPEt"><span class="keyword">type</span> <code class="type">'contestant</code> t</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTt.round">round</span>&nbsp;: <code class="type">int</code>;</code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" ><div class="info ">
+The round during which the contest took place (zero-indexed).<br>
+</div>
+</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTt.position">position</span>&nbsp;: <code class="type">int</code>;</code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" ><div class="info ">
+At what position in the round (zero-indexed). There are as many
+	  positions as contests in a round, and twice as many contestants
+	  as positions in a round.<br>
+</div>
+</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTt.entry_pair">entry_pair</span>&nbsp;: <code class="type">'contestant option * 'contestant option</code>;</code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" ><div class="info ">
+The contending contestants<br>
+</div>
+</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTt.winner">winner</span>&nbsp;: <code class="type">'contestant option</code>;</code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" ><div class="info ">
+The winner of the contest, or None if not completed.<br>
+</div>
+</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr></table>
+}
+
+
+
+<pre><span id="VALfirst"><span class="keyword">val</span> first</span> : <code class="type">'contestant <a href="Contest.html#TYPEt">t</a> -> 'contestant</code></pre><div class="info ">
+The first contestant<br>
+</div>
+
+<pre><span id="VALmap"><span class="keyword">val</span> map</span> : <code class="type">('contestant -> 'b) -> 'contestant <a href="Contest.html#TYPEt">t</a> -> 'b <a href="Contest.html#TYPEt">t</a></code></pre><div class="info ">
+Conversion to a different type of contestant.
+<p>
+
+	This is used to convert between int t and Entry.slot t.
+<p>
+
+	The int representation is used for calculating paths through the
+	tournament, and thus for figuring out who has lost to a given
+	winner. For example, in the first round, contestants 2 and 3 vie
+	for position 1; in the second round, the winner will vie for
+	position 0. Thus, given an int, we can predict its path through
+	the tournament using a simple calculation, e.g. 4 -&gt; 2 -&gt; 1 -&gt;
+	0. See function path_intersect.
+<p>
+
+	The Entry.slot representation is used for printing and sorting of
+	results.<br>
+</div>
+</body></html>
