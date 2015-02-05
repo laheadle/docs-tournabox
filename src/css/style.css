@@ -65,6 +65,12 @@ color: #1c45d6;
 
 .marketing { margin: 0 10px; }
 
+@media (min-width:900px) {
+	.marketing .tournabox-container {
+		min-width: 615px;
+	}
+}
+
 .marketing .tournabox-container {
 	float: right;
 	display: inline-block;
